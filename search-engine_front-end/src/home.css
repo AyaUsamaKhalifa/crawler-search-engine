@@ -16,15 +16,7 @@
 .textArea{
     width: 100%;
 }
-html, body, #root{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    background-color: rgb(254, 245, 255);
-    
-}
+
 
 
   

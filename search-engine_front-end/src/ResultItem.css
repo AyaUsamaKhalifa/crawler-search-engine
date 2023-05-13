@@ -1,0 +1,24 @@
+p{
+    margin-top: 8px;
+}
+p b{
+    color: #942193;
+}
+h2{
+    margin-bottom: 12px;
+    color: #942193;
+}
+a{
+    color: 	#CB6CE6;
+}
+.result-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 97.5%;
+    border-bottom: 1px solid rgba(122.5, 122.5, 122.5, 0.5);
+    padding-left: 2.5%;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
