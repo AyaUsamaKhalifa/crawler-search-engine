@@ -4,6 +4,7 @@ import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import CircularProgress from '@mui/material/CircularProgress';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 
@@ -17,6 +18,7 @@ function filteredOptions(options, { inputValue, input }) {
 function SearchArea() {
   const [open, setOpen] = React.useState(false); 
   const [options, setOptions] = React.useState([]);
+  const [searchText, setSearchText] = React.useState("");
   const loading = open && options.length === 0;
   React.useEffect(() => {
 
@@ -50,6 +52,18 @@ function SearchArea() {
       },
     },
   });
+  const navigate = useNavigate();
+  function handleKeyDown(event)
+  {
+    if (event.key === 'Enter'&& searchText !== "") {
+      navigate(`/${event.target.value}`)
+    }
+    //console.log(searchText)
+  }
+  function handleChange(event, value) { 
+    setSearchText(value)
+    console.log(value)
+  }
 
   return (
     <ThemeProvider theme={theme} >
@@ -67,10 +81,11 @@ function SearchArea() {
             options={options}
             filterOptions={filteredOptions}
             loading={loading}
+            onChange={handleChange}
+            onKeyDown={handleKeyDown}
             renderInput = {(params) => (
             <TextField
                 {...params}
-                
                 label="Enter your search here..."
                 InputProps = {{
                 ...params.InputProps,

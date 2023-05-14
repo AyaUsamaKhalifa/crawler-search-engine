@@ -11,8 +11,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />  
-          <Route path="/SearchResults" element={<ResultsPage />}>
-         
+          <Route path="/:SearchResult" element={<ResultsPage />}>
           </Route>
         </Routes>
       </BrowserRouter>
