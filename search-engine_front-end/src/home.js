@@ -10,9 +10,7 @@ function Home() {
   return (
       <div className = "searchArea">
         <img className = "imageFeatures" src = {Image} alt='Search'/>
-        <div className = "textArea">
           <SearchArea />
-        </div>
       </div>
   );
 }

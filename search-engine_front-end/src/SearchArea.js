@@ -1,10 +1,11 @@
 import React from 'react';
-import './home.css';
+import './SearchArea.css'
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import CircularProgress from '@mui/material/CircularProgress';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useNavigate } from 'react-router-dom';
+import { Button } from '@mui/material';
 import axios from 'axios';
 
 
@@ -18,7 +19,8 @@ function filteredOptions(options, { inputValue, input }) {
 function SearchArea() {
   const [open, setOpen] = React.useState(false); 
   const [options, setOptions] = React.useState([]);
-  const [searchText, setSearchText] = React.useState("");
+  const [searchText, setSearchText] = React.useState();
+  const [searchInput, setSearchInput] = React.useState("");
   const loading = open && options.length === 0;
   React.useEffect(() => {
 
@@ -53,54 +55,85 @@ function SearchArea() {
     },
   });
   const navigate = useNavigate();
-  function handleKeyDown(event)
+  function handleClick(event)
   {
-    if (event.key === 'Enter'&& searchText !== "") {
-      navigate(`/${event.target.value}`)
+    
+    if (searchText !== "" && searchText !== null) {
+      navigate(`/${searchText.title}`)
+      axios.post("http://localhost:8081/PopularSearches", { title: `${searchText.title}` })
+        .then(response => { console.log(response.data); })
+        .catch(error => { console.log(error); });
     }
-    //console.log(searchText)
+    else if (searchInput !== "" && searchInput !== null) { 
+      console.log(searchInput)
+      navigate(`/${searchInput}`)
+      console.log(`/${searchInput}`)
+      axios.post("http://localhost:8081/PopularSearches", { title: `${searchInput}` })
+        .then(response => { console.log(response.data); })
+        .catch(error => { console.log(error); });
+    }
   }
   function handleChange(event, value) { 
     setSearchText(value)
-    console.log(value)
   }
+  function handleInput(event, value) { 
+    setSearchInput(value)
+  }
+  function handleOption(option) { 
+    if (typeof option === 'string') {
+      return option;
+    }
+    else { 
+      return option.title;
+    }
+  }
+  
 
   return (
-    <ThemeProvider theme={theme} >
-        <Autocomplete
-            sx = {{ width: "100%",borderColor:"red" }}
-            open = {open}
-            onOpen = {() => {
-            setOpen(true);
-            }}
-            onClose = {() => {
-            setOpen(false);
-            }}
-            isOptionEqualToValue = {(option, value) => option.title === value.title}
-            getOptionLabel = {(option) => option.title}
-            options={options}
-            filterOptions={filteredOptions}
-            loading={loading}
-            onChange={handleChange}
-            onKeyDown={handleKeyDown}
-            renderInput = {(params) => (
-            <TextField
-                {...params}
-                label="Enter your search here..."
-                InputProps = {{
-                ...params.InputProps,
-                sx: {color: '#9700C2'},
-                endAdornment: (
-                    <React.Fragment>
-                    {loading ? <CircularProgress color="inherit" size={20} /> : null}
-                    {params.InputProps.endAdornment}
-                    </React.Fragment>
-                ),
-                }}
-            />
-            )}
-        />    
-    </ThemeProvider>
+    <div className='search-area'>
+      <div className='search-bar'>
+      <ThemeProvider theme={theme} >
+          <Autocomplete
+              sx = {{ width: "100%", height: "100%",borderColor:"red" }}
+              open = {open}
+              onOpen = {() => {
+              setOpen(true);
+              }}
+              onClose = {() => {
+              setOpen(false);
+              }}
+              isOptionEqualToValue = {(option, value) => option.title === value.title}
+              getOptionLabel = {handleOption}
+              options={options}
+              freeSolo
+              filterOptions={filteredOptions}
+              loading={loading}
+              onChange={handleChange}
+              onInputChange={handleInput}
+              renderInput = {(params) => (
+              <TextField
+                  {...params}
+                  label="Enter your search here..."
+                  InputProps = {{
+                  ...params.InputProps,
+                  sx: {color: '#9700C2'},
+                  endAdornment: (
+                      <React.Fragment>
+                      {loading ? <CircularProgress color="inherit" size={20} /> : null}
+                      {params.InputProps.endAdornment}
+                      </React.Fragment>
+                  ),
+                  }}
+              />
+              )}
+          />    
+        </ThemeProvider>
+        </div>
+        <div className='button'>
+        {((searchText != null && searchText.length) || searchInput.length) ? (<Button color='secondary' variant="outlined" onClick={handleClick}>Search</Button>)
+            : (<Button color='secondary' variant="outlined" disabled>Search</Button>)}
+        </div>
+      </div>
   );
 }
 

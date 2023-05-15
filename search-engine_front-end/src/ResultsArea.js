@@ -97,7 +97,7 @@ function createResultItems(Result) {
 }
 
 
-function ResultsArea() {
+function ResultsArea(props) {
     const [allResults, setAllResults] = React.useState(websiteInfo);
     const [results, setResults] = React.useState([]);
     const [currPage, setCurrPage] = React.useState(1);
