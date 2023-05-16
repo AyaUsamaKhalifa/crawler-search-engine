@@ -6,19 +6,21 @@ import lombok.NoArgsConstructor;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
-@Document(collection = "Temp")
+import java.util.List;
+
+@Document(collection = "InvertedFiles")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 //Handles getters and setters
 @Data
 //Creating a constructor that takes all private fields as parameters
 @AllArgsConstructor
 //A constructor that takes no parameters
 @NoArgsConstructor
-public class Temp {
+public class Word {
     @Id
-    private ObjectId id;
-    private String imdbId;
-    private String Name;
-
-
+    public ObjectId id;
+    public String word;
+    public List<Website> data;
 }

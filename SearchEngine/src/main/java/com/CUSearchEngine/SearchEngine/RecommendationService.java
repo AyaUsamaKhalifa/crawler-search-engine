@@ -1,29 +1,11 @@
 package com.CUSearchEngine.SearchEngine;
-
-import com.mongodb.ReadConcern;
-import com.mongodb.TransactionOptions;
-import com.mongodb.WriteConcern;
-import com.mongodb.client.model.Sorts;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
-import org.springframework.data.mongodb.MongoTransactionManager;
-import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.TransactionDefinition;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.transaction.reactive.TransactionalOperator;
-import org.springframework.transaction.support.TransactionOperations;
-import org.springframework.transaction.support.TransactionTemplate;
-import org.springframework.util.StringUtils;
-
-import javax.management.Query;
 import java.util.List;
-import java.util.Locale;
 import java.util.Optional;
-import java.util.Queue;
 
-import static com.mongodb.client.model.Sorts.descending;
 
 @Service
 public class RecommendationService {
@@ -33,7 +15,6 @@ public class RecommendationService {
     private RecommendationRepository cursor;
     //Access data methods
     public List<Recommendation> allRecommendations(){
-        // findAll --> in mongo repository class it will return a list of Temp
         return cursor.findAll(Sort.by(Sort.Direction.DESC, "noOfClicks"));
     }
     @Transactional

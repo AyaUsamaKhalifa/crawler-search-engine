@@ -25,7 +25,4 @@ public class RecommendationController {
     public ResponseEntity<Recommendation> testRequest(@RequestBody Map<String, String> payload){
         return new ResponseEntity<Recommendation>(recommendationService.updateRecommendation(payload.get("title")), HttpStatus.OK);
     }
-
-
-
 }

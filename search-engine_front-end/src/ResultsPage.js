@@ -10,18 +10,18 @@ import axios from "axios";
 function ResultsPage() {
   const [searchResult, setSearchResults] = React.useState([]);
   let { SearchResult } = useParams();
-  // React.useEffect(() => {
-  //   (async () => {
-  //     await axios.get(`http://localhost:8081/PopularSearches/${encodeURIComponent(SearchResult)}`)
-  //       .then((response) => {
-  //         setSearchResults(response.data);
-  //         console.log(response.data);
-  //       })
-  //       .catch((error) => {
-  //         console.error(error);
-  //       });
-  //   })();
-  // }, [SearchResult]);
+  React.useEffect(() => {
+    (async () => {
+      await axios.get(`http://localhost:8081/SearchResults/${encodeURIComponent(SearchResult)}`)
+        .then((response) => {
+          setSearchResults(response.data);
+          console.log(response.data);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    })();
+  }, [SearchResult]);
   return (
     <div className="results-page">
       <div className="search-section">
@@ -30,7 +30,7 @@ function ResultsPage() {
         </Link>
           <SearchArea SearchResults={searchResult} />
       </div>
-      <ResultsArea />
+      <ResultsArea websiteInfo={searchResult} />
     </div>
   );
 }

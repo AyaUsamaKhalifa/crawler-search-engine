@@ -10,7 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class SearchEngineApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(SearchEngineApplication.class, args);
+		phraseSearching ps=new phraseSearching();
+		//ps.makingPhraseSearching("facebook geeks");
 	}
 
 }

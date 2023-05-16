@@ -58,7 +58,8 @@ function SearchArea() {
   function handleClick(event)
   {
     
-    if (searchText !== "" && searchText !== null) {
+    if (searchText !== "" && searchText !== null && searchText !== undefined && typeof searchText !== 'string') {
+      console.log(searchText);
       navigate(`/${searchText.title}`)
       axios.post("http://localhost:8081/PopularSearches", { title: `${searchText.title}` })
         .then(response => { console.log(response.data); })
