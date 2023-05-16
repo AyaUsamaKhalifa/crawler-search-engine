@@ -3,6 +3,8 @@ package com.CUSearchEngine.SearchEngine;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.tartarus.snowball.ext.porterStemmer;
+
+import java.io.IOException;
 import java.util.*;
 
 @Service
@@ -35,7 +37,7 @@ public class WordService {
         return  arrOfWordsList;
     }
     //Access data methods
-    public List<RankedURLs> getWord(String word) {
+    public List<RankedURLs> getWord(String word) throws IOException {
         //To Do add the stemmed words
         List<String> words = stemWords(word);
         Ranker ranker = new Ranker();
@@ -68,6 +70,7 @@ public class WordService {
                     }
 
                 }
+                System.out.println(websites);
                 List<Website>resultedWebsites = phrase.makingPhraseSearching(originalPhrase, websites);
                 for (int j = 0; j < resultedWebsites.size(); j++) {
                     //To Do change the word to be the stemmed value
