@@ -23,32 +23,21 @@ public class phraseSearching {
                 minIndex=j;
             }
         }
-
         //iterating on the urls
         for (int j = 0; j < Data.get(minIndex).data.size(); j++)
         {
             String currentUrl = Data.get(minIndex).data.get(j).URL;
-            //search in the url
-            //String title= Jsoup.parse(currentUrl).title();
             org.jsoup.nodes.Document currentHTMLdoc = Jsoup.connect(currentUrl).get();
-            System.out.println(currentHTMLdoc.body().text());
-            System.out.println(currentHTMLdoc.title());
-            System.out.println(orginalPhrase);
+
             if  (currentHTMLdoc.body().text().toLowerCase().contains(orginalPhrase))
             {
                 UrlsDataReturned.add(Data.get(minIndex).data.get(j));
             }
-            else if (currentHTMLdoc.title().toLowerCase().contains(orginalPhrase))
+            else if (currentHTMLdoc.head().text().toLowerCase().contains(orginalPhrase))
             {
                 UrlsDataReturned.add(Data.get(minIndex).data.get(j));
             }
-//            else if (currentHTMLdoc.head().text().contains(orginalPhrase))
-//            {
-//                UrlsDataReturned.add(Data.get(minIndex).data.get(j));
-//            }
         }
-        System.out.println("print"+UrlsDataReturned);
         return UrlsDataReturned;
-
     }
 }

@@ -68,7 +68,6 @@ public class WordService {
                     {
                         websites.add(currWord.get());
                     }
-
                 }
                 System.out.println(websites);
                 List<Website>resultedWebsites = phrase.makingPhraseSearching(originalPhrase, websites);
