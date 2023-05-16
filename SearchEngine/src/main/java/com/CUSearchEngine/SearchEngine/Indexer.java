@@ -11,12 +11,19 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.MongoClient;
 import com.mongodb.*;
+import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.tartarus.snowball.ext.porterStemmer;
+import static java.lang.Math.log;
 
 
 
 public class Indexer {
+
+    public double calc_IDF(long num_docs,long num_docs_word) {
+        return (log((double)num_docs / num_docs_word)) / log(2);
+    }
+
     //a hashset of words which are going to be ignored when parsing the html documents
     //O(1) for looking up a word
     HashSet<String> stopWords = new HashSet<>(Arrays.asList("a","about","above","after","again","against","all","am","an","and","any","are","aren't","as","at","be","because","been","before","being","below","between","both","but","by","can't","cannot","could","couldn't",
@@ -27,13 +34,12 @@ public class Indexer {
             "where","where's","which","while","who","who's","whom","why","why's","with","won't","would","wouldn't","you","you'd","you'll","you're","you've","your","yours","yourself","yourselves"));
 
 
-
     //class that holds the data of each word
     static class Data {
         String URL;
         String paragraph;
-        int TF=0;
-        int IDF=0;
+        double TF=0;
+        double IDF=0;
         String title;
         int noOccBold;
         int H1;
@@ -42,8 +48,8 @@ public class Indexer {
         int H4;
         int H5;
         int H6;
-        int date=0;
         int noOccTitle;
+        double popularity;
         ArrayList<Integer> titlePosition;
         ArrayList<Integer> bodyPosition;
         int totalOcc;
@@ -54,6 +60,7 @@ public class Indexer {
             bodyPosition = new ArrayList<>();
             totalOcc = 0;
             noOccBold=0;
+            popularity=0;
             H1=0;
             H2=0;
             H3=0;
@@ -85,7 +92,6 @@ public class Indexer {
 
 
     }
-
     Word addWord(String currentWord,porterStemmer stemmer,HashMap<String,Word> wordsMap, String url){
         //stemming the word
         stemmer.setCurrent(currentWord);
@@ -122,16 +128,43 @@ public class Indexer {
         //into the inverted files documents in the database
         HashMap<String, Word> wordsMap = new HashMap<>();
 
+        //number of documents in the collection
+        long totalNumDocs = collection.countDocuments();
+
+        //hashset to represent the spam sites, will be removed after the for loop
+        Set<String> spam = new HashSet<>();
+
+        //calculate popularity of the urls in the DB
+        // Retrieve a value of a key inside a document of documents
+        MongoCursor<Document> result = collection.find().cursor();
+        Map<String, ArrayList<String>> resultMap = new HashMap<>();
+        while (result.hasNext()) {
+            Document URLS = result.next();
+            resultMap.put((String) URLS.get("URL"), (ArrayList<String>) URLS.get("RefIn"));
+        }
+        popularity popularity = new popularity();
+        HashMap<String, Double> popularityMap = popularity.calculatePopularity(resultMap);
+
         //loop over the documents in the collection to get corresponding html docs
         for (Document doc : collection.find()) {
             String url = doc.getString("URL");
+
             //getting the html of the url
             org.jsoup.nodes.Document currentHTMLdoc = Jsoup.connect(url).get();
             System.out.println("new doc");
+
             //getting all the html elements
             Elements elements = currentHTMLdoc.getAllElements();
+
             //getting the title text separately before the loop as the title is added to the data of all words that appear in the html document
             String titleText = currentHTMLdoc.select("title").text();
+
+            //list to store the stemmed document words, to calculate their tf after the for loop
+            List<String> totalDocWords = new ArrayList<>();
+
+            //total number of words in the document (used to calculate tf)
+            long totalDocWordCount = 0;
+
             //looping over the html elements and checking for specific elements from which we
             //want to collect data about the words for the ranker
             for (org.jsoup.nodes.Element element : elements) {
@@ -142,7 +175,7 @@ public class Indexer {
                         //we only care about the title in the head,
                         // get the title from the head and parse it
                         String[] words = titleText.toLowerCase().split("[\\s\\p{Punct}]+"); //splitting on whitespace
-
+                        totalDocWordCount+=words.length;
                         //parse the title
                         for (int j=0;j<words.length;j++) {
                             String currentWord = words[j];
@@ -151,6 +184,8 @@ public class Indexer {
                                 continue;
                             //add word to the dictionary
                             Word wordObj = addWord(currentWord,stemmer,wordsMap,url);
+                            //add stemmed word to the list of document words
+                            totalDocWords.add(wordObj.word);
                             //increment the number of occurrences in the title
                             wordObj.data.get(url).noOccTitle++;
                             //increment the total occurrences
@@ -168,7 +203,7 @@ public class Indexer {
                         //String bodyText = currentHTMLdoc.select("body").text();
                         String bodyText = element.text();
                         String[] bodyWords = bodyText.split("[\\s\\p{Punct}]+"); //splitting on whitespace
-
+                        totalDocWordCount+=bodyWords.length;
                         //parse the body
                         for (int j=0;j< bodyWords.length;j++) {
                             String originalWord=bodyWords[j];
@@ -181,6 +216,8 @@ public class Indexer {
                                 continue;
                             //add word to the dictionary
                             Word wordObj = addWord(currentWord,stemmer,wordsMap,url);
+                            //add stemmed word to the list of document words
+                            totalDocWords.add(wordObj.word);
                             //increment the total occurrences
                             wordObj.data.get(url).totalOcc++;
                             //getting the position of the text
@@ -342,8 +379,24 @@ public class Indexer {
                     }
                 }
             }
+            //after looping on the document and collecting the data for each word we loop on the body a second time to calculate the TF
+            for (String bodyWord : totalDocWords) {
+                double TF =  (double) wordsMap.get(bodyWord).data.get(url).totalOcc / totalDocWordCount;
+                //checking if website is a spam
+                if(TF>=0.5)
+                {
+                    //add site to spam list
+                    spam.add(url);
+                }
+                else
+                {
+                    wordsMap.get(bodyWord).data.get(url).TF = TF;
+                    //inserting popularity value
+                    wordsMap.get(bodyWord).data.get(url).popularity = popularityMap.get(url);
+
+                }
+            }
         }
-        //calculate the idf and tdf of each word in the words map
         //write to the database
         //getting the HTMLDocuments collection
         MongoCollection<Document> invertedFilesCollection = db.getCollection("InvertedFiles");
@@ -351,10 +404,17 @@ public class Indexer {
         List<Document> documentList = new ArrayList<Document>();
         //loop over the words in the map
         for(Map.Entry<String, Word> word : wordsMap.entrySet()){
-
+            //calculating the IDF of the current word (total documents in the DB/ #of documents where the word is mentioned)
+            //it is constant for the word regardless of the website its in
+            double currentWordIDF = calc_IDF(totalNumDocs,word.getValue().data.size());
             ArrayList<Document> dataDocuments = new ArrayList<>();
             //loop over the urls in the word
             for(Map.Entry<String,Data> data : word.getValue().data.entrySet()){
+                //if the website is spam, don't add it to the database for any word
+                if(spam.contains(data.getValue().URL)){
+                    continue;
+                }
+                data.getValue().IDF = currentWordIDF;
                 Document dataDocument = new Document("URL", data.getValue().URL)
                         .append("paragraph", data.getValue().paragraph)
                         .append("TF", data.getValue().TF)
@@ -367,16 +427,15 @@ public class Indexer {
                         .append("H4", data.getValue().H4)
                         .append("H5", data.getValue().H5)
                         .append("H6", data.getValue().H6)
-                        .append("date", data.getValue().date)
                         .append("noOccTitle", data.getValue().noOccTitle)
                         .append("titlePosition", data.getValue().titlePosition)
                         .append("bodyPosition", data.getValue().bodyPosition)
-                        .append("totalOcc", data.getValue().totalOcc);
+                        .append("totalOcc", data.getValue().totalOcc)
+                        .append("popularity", data.getValue().popularity);
                 dataDocuments.add(dataDocument);
             }
             Document wordDoc = new Document("word",word.getValue().word).append("data",dataDocuments);
             documentList.add(wordDoc);
-            //invertedFilesCollection.insertOne(wordDoc);
         }
         invertedFilesCollection.insertMany(documentList);
         // Close the MongoDB client

@@ -6,7 +6,7 @@ import org.bson.Document;
 import java.util.*;
 
 public class popularity {
-    private Map<String, Double> URLPopularity = new HashMap<>(); //hn2rha mn el db 3obara 3n el URL=>key , popularity number=>value
+    private HashMap<String, Double> URLPopularity = new HashMap<>(); //hn2rha mn el db 3obara 3n el URL=>key , popularity number=>value
     //private Map<String, ArrayList<String>> URLL = new HashMap<>();
     private float d = 4.0f/10 ; //constant value
     private int iterations = 1000;
@@ -30,7 +30,7 @@ public class popularity {
 //        System.out.println(URLPopularity);
 //    }
 
-    public Map<String, Double> calculatePopularity(Map<String,ArrayList<String>> URL) {
+    public HashMap<String, Double> calculatePopularity(Map<String,ArrayList<String>> URL) {
         //give initial value to the urls
         Map<String, Double> popularityTemp = new HashMap<>();
         double initialvalue = 1.0/6000;
