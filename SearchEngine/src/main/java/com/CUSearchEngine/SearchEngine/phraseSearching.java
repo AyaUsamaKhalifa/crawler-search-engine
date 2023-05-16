@@ -9,7 +9,8 @@ public class phraseSearching {
     public List<Website> makingPhraseSearching(String orginalPhrase ,List<Word> Data) {
         List<Website> UrlsDataReturned = new ArrayList<Website>();
         //iterate on the urls of the first word
-        int min=0;
+        System.out.println(Data.size());
+        int min=Integer.MAX_VALUE;
         int minIndex=0;
         //iterate on the urls of the words in the phrase to get the word with the min number of urls
         for (int j=0;j<Data.size();j++)
@@ -20,6 +21,7 @@ public class phraseSearching {
                 minIndex=j;
             }
         }
+        System.out.println(Data.size());
         //iterating on the urls
         for (int j = 0; j < Data.get(minIndex).data.size(); j++)
         {

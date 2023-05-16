@@ -21,20 +21,14 @@ public class WordService {
         porterStemmer stemmer = new porterStemmer();
         String[] arrOfWords = searchSentence.split("(?=([^\"]*\"[^\"]*\")*[^\"]*$)\\s+", -2);
         List<String> arrOfWordsList = new ArrayList<String>(Arrays.asList(arrOfWords));
-        for(int i = 0;  i < arrOfWordsList.size(); i++)
-        {
-            System.out.println( arrOfWordsList.get(i));
-        }
-        System.out.println( arrOfWordsList.size());
         for(int i = 0; i < arrOfWordsList.size(); i++)
         {
-            System.out.println(arrOfWordsList.get(i) );
             if(!stopWords.contains(arrOfWordsList.get(i)) && arrOfWordsList.get(i).charAt(0) != '\"') {
                 stemmer.setCurrent(arrOfWordsList.get(i));
                 stemmer.stem();
                 arrOfWordsList.set(i, stemmer.getCurrent());
             }
-            else {
+            else if(stopWords.contains(arrOfWordsList.get(i))) {
                 arrOfWordsList.remove(i);
             }
         }
@@ -60,7 +54,6 @@ public class WordService {
             }
             else
             {
-                System.out.println("Phraseeeeeeeeeeeee");
                 phraseSearching phrase = new phraseSearching();
                 String originalPhrase = words.get(i).replace("\"", "");
                 String copy = String.valueOf(originalPhrase);
@@ -68,7 +61,7 @@ public class WordService {
                 List<Word> websites = new ArrayList<>();
                 for(int k = 0; k < phraseData.size(); k++)
                 {
-                    Optional<Word> currWord = cursor.findByWord(words.get(i).toLowerCase());
+                    Optional<Word> currWord = cursor.findByWord(phraseData.get(k).toLowerCase());
                     if(currWord.isPresent())
                     {
                         websites.add(currWord.get());
@@ -78,7 +71,7 @@ public class WordService {
                 List<Website>resultedWebsites = phrase.makingPhraseSearching(originalPhrase, websites);
                 for (int j = 0; j < resultedWebsites.size(); j++) {
                     //To Do change the word to be the stemmed value
-                    ranker.rank(resultedWebsites.get(j), originalPhrase.toLowerCase());
+                    ranker.rank(resultedWebsites.get(j), '\"' + originalPhrase.toLowerCase()+'\"');
                 }
             }
         }
