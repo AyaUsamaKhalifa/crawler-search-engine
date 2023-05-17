@@ -3,8 +3,10 @@ import com.mongodb.ConnectionString;
 import com.mongodb.client.*;
 import com.mongodb.client.model.UpdateOneModel;
 import com.mongodb.client.model.UpdateOptions;
+import com.mongodb.client.model.Updates;
 import org.bson.BsonNull;
 import org.bson.Document;
+import org.bson.conversions.Bson;
 import org.jsoup.Jsoup;
 
 import java.io.IOException;
@@ -41,7 +43,6 @@ public class Indexer {
         String URL;
         String paragraph;
         double TF=0;
-        double IDF=0;
         String title;
         int noOccBold;
         int H1;
@@ -51,18 +52,14 @@ public class Indexer {
         int H5;
         int H6;
         int noOccTitle;
-        double popularity;
-        ArrayList<Integer> titlePosition;
-        ArrayList<Integer> bodyPosition;
+        HashSet<String> originalWords;
         int totalOcc;
         Data(){
             paragraph = "";
             noOccTitle = 0;
-            titlePosition = new ArrayList<>();
-            bodyPosition = new ArrayList<>();
+            originalWords = new HashSet<>();
             totalOcc = 0;
             noOccBold=0;
-            popularity=0;
             H1=0;
             H2=0;
             H3=0;
@@ -125,7 +122,7 @@ public class Indexer {
         db = mongoClient.getDatabase("SearchEngine-api-db");
 
         //getting the InvertedFiles collection
-        MongoCollection<Document> IFcollection = db.getCollection("InvertedFiles");
+        MongoCollection<Document> IFcollection = db.getCollection("tempIndexer");
 
         //retrieving the list of indexed urls if there is any in the db
         HashSet<String> indexedURLS = IFcollection.distinct("indexedurls", String.class).into(new HashSet<>());
@@ -155,7 +152,7 @@ public class Indexer {
         }
         popularity popularity = new popularity();
         HashMap<String, Double> popularityMap = popularity.calculatePopularity(resultMap);
-
+        int docnum =1;
         //loop over the documents in the collection to get corresponding html docs
         for (Document doc : collection.find()) {
             String url = doc.getString("URL");
@@ -165,17 +162,23 @@ public class Indexer {
             {
                 continue;
             }
-            else
-            {
+
+            org.jsoup.nodes.Document currentHTMLdoc;
+            try{
+                //getting the html of the url
+                currentHTMLdoc = Jsoup.connect(url).get();
+                System.out.println("new doc" + docnum);
+                docnum++;
                 newIndexedURLS.add(url);
+
+            }catch(Exception e)
+            {
+                continue;
             }
 
-            //getting the html of the url
-            org.jsoup.nodes.Document currentHTMLdoc = Jsoup.connect(url).get();
-            System.out.println("new doc");
 
             //getting all the html elements
-            Elements elements = currentHTMLdoc.getAllElements();
+            Elements elements = currentHTMLdoc.select("body, title, h1, h2, h3, h4, h5, h6, b");
 
             //getting the title text separately before the loop as the title is added to the data of all words that appear in the html document
             String titleText = currentHTMLdoc.select("title").text();
@@ -200,6 +203,10 @@ public class Indexer {
                         //parse the title
                         for (int j=0;j<words.length;j++) {
                             String currentWord = words[j];
+                            //filtering non english words
+                            if(currentWord.matches(".*[^\\p{ASCII}\\p{Punct}\\p{Digit}\\s].*")){
+                                continue;
+                            }
                             //ignore stop words
                             if (stopWords.contains(currentWord))
                                 continue;
@@ -213,8 +220,8 @@ public class Indexer {
                             wordObj.data.get(url).totalOcc++;
                             //adding title
                             wordObj.data.get(url).title=titleText;
-                            //getting the position of the word in the title
-                            wordObj.data.get(url).titlePosition.add(j);
+                            //adding the non-stemmed word
+                            wordObj.data.get(url).originalWords.add(currentWord);
                         }
                     }
                     //////////////////////////////////////////////
@@ -232,6 +239,10 @@ public class Indexer {
                             //to extract its paragraph correctly
                             //as the use of .indexOf() requires the word to be the same as in the original text
                             String currentWord = originalWord.toLowerCase();
+                            //filtering non english words
+                            if(currentWord.matches(".*[^\\p{ASCII}\\p{Punct}\\p{Digit}\\s].*")){
+                                continue;
+                            }
                             //ignore stop words
                             if (stopWords.contains(currentWord))
                                 continue;
@@ -241,8 +252,8 @@ public class Indexer {
                             totalDocWords.add(wordObj.word);
                             //increment the total occurrences
                             wordObj.data.get(url).totalOcc++;
-                            //getting the position of the text
-                            wordObj.data.get(url).bodyPosition.add(j);
+                            //adding the non-stemmed word
+                            wordObj.data.get(url).originalWords.add(currentWord);
                             //adding title
                             wordObj.data.get(url).title=titleText;
                             //adding the paragraph in which the word first occurred
@@ -284,6 +295,10 @@ public class Indexer {
                         //parse the text
                         for (String h1TextWord : h1TextWords) {
                             String currentWord = h1TextWord;
+                            //filtering non english words
+                            if(currentWord.matches(".*[^\\p{ASCII}\\p{Punct}\\p{Digit}\\s].*")){
+                                continue;
+                            }
                             //ignore stop words
                             if (stopWords.contains(currentWord))
                                 continue;
@@ -301,6 +316,10 @@ public class Indexer {
                         //parse the text
                         for (String h2TextWord : h2TextWords) {
                             String currentWord = h2TextWord;
+                            //filtering non english words
+                            if(currentWord.matches(".*[^\\p{ASCII}\\p{Punct}\\p{Digit}\\s].*")){
+                                continue;
+                            }
                             //ignore stop words
                             if (stopWords.contains(currentWord))
                                 continue;
@@ -318,6 +337,10 @@ public class Indexer {
                         //parse the text
                         for (String h3TextWord : h3TextWords) {
                             String currentWord = h3TextWord;
+                            //filtering non english words
+                            if(currentWord.matches(".*[^\\p{ASCII}\\p{Punct}\\p{Digit}\\s].*")){
+                                continue;
+                            }
                             //ignore stop words
                             if (stopWords.contains(currentWord))
                                 continue;
@@ -335,6 +358,10 @@ public class Indexer {
                         //parse the text
                         for (String h4TextWord : h4TextWords) {
                             String currentWord = h4TextWord;
+                            //filtering non english words
+                            if(currentWord.matches(".*[^\\p{ASCII}\\p{Punct}\\p{Digit}\\s].*")){
+                                continue;
+                            }
                             //ignore stop words
                             if (stopWords.contains(currentWord))
                                 continue;
@@ -352,6 +379,10 @@ public class Indexer {
                         //parse the text
                         for (String h5TextWord : h5TextWords) {
                             String currentWord = h5TextWord;
+                            //filtering non english words
+                            if(currentWord.matches(".*[^\\p{ASCII}\\p{Punct}\\p{Digit}\\s].*")){
+                                continue;
+                            }
                             //ignore stop words
                             if (stopWords.contains(currentWord))
                                 continue;
@@ -369,6 +400,10 @@ public class Indexer {
                         //parse the text
                         for (String h6TextWord : h6TextWords) {
                             String currentWord = h6TextWord;
+                            //filtering non english words
+                            if(currentWord.matches(".*[^\\p{ASCII}\\p{Punct}\\p{Digit}\\s].*")){
+                                continue;
+                            }
                             //ignore stop words
                             if (stopWords.contains(currentWord))
                                 continue;
@@ -386,6 +421,10 @@ public class Indexer {
                         //parse the text
                         for (String boldWord : boldWords) {
                             String currentWord = boldWord;
+                            //filtering non english words
+                            if(currentWord.matches(".*[^\\p{ASCII}\\p{Punct}\\p{Digit}\\s].*")){
+                                continue;
+                            }
                             //ignore stop words
                             if (stopWords.contains(currentWord))
                                 continue;
@@ -412,23 +451,18 @@ public class Indexer {
                 else
                 {
                     wordsMap.get(bodyWord).data.get(url).TF = TF;
-                    //inserting popularity value
-                    wordsMap.get(bodyWord).data.get(url).popularity = popularityMap.get(url);
 
                 }
             }
         }
         //write to the database
-        //getting the HTMLDocuments collection
-        MongoCollection<Document> invertedFilesCollection = db.getCollection("InvertedFiles");
+        //getting the InvertedFiles collection
+        MongoCollection<Document> invertedFilesCollection = db.getCollection("tempIndexer");
         List<UpdateOneModel<Document>> updates = new ArrayList<>();
         //list of all the documents to be inserted in the database using the insert many query
         List<Document> documentList = new ArrayList<Document>();
         //loop over the words in the map
         for(Map.Entry<String, Word> word : wordsMap.entrySet()){
-            //calculating the IDF of the current word (total documents in the DB/ #of documents where the word is mentioned)
-            //it is constant for the word regardless of the website its in
-            double currentWordIDF = calc_IDF(totalNumDocs,word.getValue().data.size());
             ArrayList<Document> dataDocuments = new ArrayList<>();
             //loop over the urls in the word
             for(Map.Entry<String,Data> data : word.getValue().data.entrySet()){
@@ -436,11 +470,9 @@ public class Indexer {
                 if(spam.contains(data.getValue().URL)){
                     continue;
                 }
-                data.getValue().IDF = currentWordIDF;
                 Document dataDocument = new Document("URL", data.getValue().URL)
                         .append("paragraph", data.getValue().paragraph)
                         .append("TF", data.getValue().TF)
-                        .append("IDF", data.getValue().IDF)
                         .append("title", data.getValue().title)
                         .append("noOccBold", data.getValue().noOccBold)
                         .append("H1", data.getValue().H1)
@@ -450,10 +482,8 @@ public class Indexer {
                         .append("H5", data.getValue().H5)
                         .append("H6", data.getValue().H6)
                         .append("noOccTitle", data.getValue().noOccTitle)
-                        .append("titlePosition", data.getValue().titlePosition)
-                        .append("bodyPosition", data.getValue().bodyPosition)
-                        .append("totalOcc", data.getValue().totalOcc)
-                        .append("popularity", data.getValue().popularity);
+                        .append("originalWords", data.getValue().originalWords)
+                        .append("totalOcc", data.getValue().totalOcc);
                 dataDocuments.add(dataDocument);
             }
             Document filter = new Document("word", word.getValue().word);
@@ -491,6 +521,27 @@ public class Indexer {
             invertedFilesCollection.updateMany(new Document(), pipeline);
         }
 
+        //updating the popularity
+        MongoCollection<Document> popularityCollection = db.getCollection("URLPopularity");
+
+        // Create a list of update models
+        List<UpdateOneModel<Document>> popularityUpdates = new ArrayList<>();
+
+        // Loop over the entries in your map and create an update model for each one
+        for (Map.Entry<String, Double> entry : popularityMap.entrySet()) {
+            // Define the filter to identify the document to update based on the URL field
+            Document popularityFilter = new Document("url", entry.getKey());
+
+            // Define the update object to set the popularity field
+            Document popularityUpdate = new Document("$set", new Document("popularity", entry.getValue()));
+
+            // Create an update model and add it to the list of updates
+            UpdateOneModel<Document> updateModel = new UpdateOneModel<>(popularityFilter, popularityUpdate,new UpdateOptions().upsert(true));
+            popularityUpdates.add(updateModel);
+        }
+
+        // Execute the bulkWrite operation
+        popularityCollection.bulkWrite(popularityUpdates);
 
         // Close the MongoDB client
         mongoClient.close();

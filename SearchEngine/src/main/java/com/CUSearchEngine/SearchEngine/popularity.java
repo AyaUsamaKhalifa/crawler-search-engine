@@ -47,7 +47,9 @@ public class popularity {
                 for (String value : URL.get(key)) //loop on the urls that refrenced the upper one
                 {
                     //get the PR of the URL refrencing the outer url / the number of urls that refrenced the inner one
-                    popularity += URLPopularity.get(value).doubleValue() / URL.get(value).size();
+                    if(URL.get(value).size() != 0) {
+                        popularity += URLPopularity.get(value).doubleValue() / URL.get(value).size();
+                    }
                 }
                 popularity = (1 - d) + d * (popularity);
                 popularityTemp.put(key, popularity);
