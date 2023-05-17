@@ -1,6 +1,9 @@
 package com.CUSearchEngine.SearchEngine;
 import com.mongodb.ConnectionString;
 import com.mongodb.client.*;
+import com.mongodb.client.model.UpdateOneModel;
+import com.mongodb.client.model.UpdateOptions;
+import org.bson.BsonNull;
 import org.bson.Document;
 import org.jsoup.Jsoup;
 
@@ -19,7 +22,6 @@ import static java.lang.Math.log;
 
 
 public class Indexer {
-
     public double calc_IDF(long num_docs,long num_docs_word) {
         return (log((double)num_docs / num_docs_word)) / log(2);
     }
@@ -121,6 +123,15 @@ public class Indexer {
         MongoDatabase db;
         mongoClient = MongoClients.create(new ConnectionString("mongodb+srv://dbUser:2hMOQwIUAWAK0ymH@cluster0.kn31lqv.mongodb.net"));
         db = mongoClient.getDatabase("SearchEngine-api-db");
+
+        //getting the InvertedFiles collection
+        MongoCollection<Document> IFcollection = db.getCollection("InvertedFiles");
+
+        //retrieving the list of indexed urls if there is any in the db
+        HashSet<String> indexedURLS = IFcollection.distinct("indexedurls", String.class).into(new HashSet<>());
+        //hashset of the new set of the urls to be indexed in this run, will be appended in the database
+        HashSet<String> newIndexedURLS = new HashSet<>();
+
         //getting the HTMLDocuments collection
         MongoCollection<Document> collection = db.getCollection("HTMLDocuments");
 
@@ -148,6 +159,16 @@ public class Indexer {
         //loop over the documents in the collection to get corresponding html docs
         for (Document doc : collection.find()) {
             String url = doc.getString("URL");
+
+            //add the url to the already indexed url set (index only once)
+            if(indexedURLS.contains(url))
+            {
+                continue;
+            }
+            else
+            {
+                newIndexedURLS.add(url);
+            }
 
             //getting the html of the url
             org.jsoup.nodes.Document currentHTMLdoc = Jsoup.connect(url).get();
@@ -400,6 +421,7 @@ public class Indexer {
         //write to the database
         //getting the HTMLDocuments collection
         MongoCollection<Document> invertedFilesCollection = db.getCollection("InvertedFiles");
+        List<UpdateOneModel<Document>> updates = new ArrayList<>();
         //list of all the documents to be inserted in the database using the insert many query
         List<Document> documentList = new ArrayList<Document>();
         //loop over the words in the map
@@ -434,10 +456,42 @@ public class Indexer {
                         .append("popularity", data.getValue().popularity);
                 dataDocuments.add(dataDocument);
             }
-            Document wordDoc = new Document("word",word.getValue().word).append("data",dataDocuments);
-            documentList.add(wordDoc);
+            Document filter = new Document("word", word.getValue().word);
+            Document update = new Document("$push", new Document("data", new Document("$each", dataDocuments)));
+            UpdateOptions options = new UpdateOptions().upsert(true);
+            updates.add(new UpdateOneModel<>(filter, update, options));
         }
-        invertedFilesCollection.insertMany(documentList);
+        //updating the indexed urls
+        Document filter = new Document("name","indexed");
+        Document update = new Document("$push", new Document("indexedurls",new Document("$each",newIndexedURLS)));
+        invertedFilesCollection.updateOne(filter,update,new UpdateOptions().upsert(true));
+        if(!updates.isEmpty()) {
+            invertedFilesCollection.bulkWrite(updates);
+
+            // Define the constant num_docs value
+            long num_docs = indexedURLS.size()+newIndexedURLS.size();
+
+            // Create the aggregation pipeline to calculate the IDF value and update the existing IDF field
+            List<Document> pipeline = Arrays.asList(
+                    new Document("$addFields", new Document("IDF", new Document("$cond", Arrays.asList(
+                            new Document("$and", Arrays.asList(
+                                    new Document("$ifNull", Arrays.asList("$data", false)),
+                                    new Document("$ne", Arrays.asList("$data", new BsonNull()))
+                            )),
+                            new Document("$divide", Arrays.asList(
+                                    new Document("$ln", new Document("$divide", Arrays.asList(num_docs, new Document("$size", "$data")))),
+                                    new Document("$ln", 2)
+                            )),
+                            0
+                    ))))
+            );
+
+            // Execute the aggregation pipeline and update each document with the new IDF value
+            //this has to be executed after the updates are written to the database because it needs the updates array size of the urls of each word
+            invertedFilesCollection.updateMany(new Document(), pipeline);
+        }
+
+
         // Close the MongoDB client
         mongoClient.close();
     }
