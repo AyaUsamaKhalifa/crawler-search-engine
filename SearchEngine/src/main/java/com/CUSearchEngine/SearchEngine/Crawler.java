@@ -1,29 +1,22 @@
 package com.CUSearchEngine.SearchEngine;
 
-import com.mongodb.client.MongoClient;
-import com.mongodb.client.MongoClients;
+import com.mongodb.client.*;
 import com.mongodb.ConnectionString;
 
-import com.mongodb.*;
-import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoDatabase;
 //import org.bson.Document;
 
+import lombok.SneakyThrows;
+import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Entities;
-import org.jsoup.nodes.TextNode;
 import org.jsoup.select.Elements;
-import org.springframework.boot.SpringApplication;
 import org.jsoup.nodes.Element;
 
+import java.io.*;
+import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 import java.net.URL;
 
-import java.io.IOException;
-import java.text.Normalizer;
-
-import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -33,35 +26,44 @@ import java.util.Objects;
 import com.googlecode.htmlcompressor.compressor.HtmlCompressor;
 
 import java.io.IOException;
-import java.net.URL;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.util.*;
-
-import com.googlecode.htmlcompressor.compressor.HtmlCompressor;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Crawler implements Runnable {
     //* Static data members:
-    private static final int SHINGLE_SIZE = 40;
-    private static final double JACCARD_SIMILARITY_THRESHOLD = 0.9;
-    public static MongoClient mongoClient;
-    public static MongoDatabase db;
-    public static Integer NumOfThreads;
-    public static List<String> URLList;
-    public static HashMap<String, Set<String>> VisitedURLsHash;
-    private static Boolean LimitReached = false;
+    private static Set<Thread> threads = new HashSet<>();
+    private static final int SHINGLE_SIZE = 5;
+    private static final double JACCARD_SIMILARITY_THRESHOLD = 0.85;
+    private static MongoClient mongoClient;
+    private static MongoDatabase db;
+    private static MongoCollection<org.bson.Document> HTMLDocument;
+    private static FileWriter CrawledURLsFile;
+    private static HashMap<String, Set<String>> RefURLHashMap;
+    private static FileWriter RefURLsFile;
+    private static HashMap<String, Set<Integer>> VisitedURLsHash;
+    private static Set<String> VisitedURLsSet;  //!NEW
+    private static Set<String> CompactStringSet;    //!NEW
+    private static HashMap<String, String> normalizedHM;
+    private static Set<String> CrawledURLsSet;
+    private static Queue<String> URLsToCrawlQ;  //!NEW
+    private static FileWriter URLsToCrawlFile;
+    private static FileWriter VisitedURLsFile;
+    private static Integer NumOfThreads;
+    private static Boolean LimitReached;
     private static Integer NumOfPages = 0;
+    private static boolean Done = false;
     //* Non-static data members
     private String URL;
-    public Crawler(String URL)
+    private Crawler(String URL)
     {
         this.URL = URL;
     }
 
+    @SneakyThrows
     @Override
     public void run() {
+
         crawl();
         // after all hyperlinks checked:
         //check if 6000 pages reached
@@ -69,11 +71,9 @@ public class Crawler implements Runnable {
         {
             // less than 6000 pages
             // check if there is empty
-            System.out.println("less than 6000");
-            if(Crawler.is_empty_URLList())
+            if(Crawler.is_empty_URLsToCrawlPQ())
             {
                 //URLList is empty
-                //TODO: terminate thread
                 synchronized (Crawler.NumOfThreads)
                 {
                     Crawler.NumOfThreads--;
@@ -82,29 +82,7 @@ public class Crawler implements Runnable {
             }
             else
             {
-                System.out.println("URL is not empty");
-                // create new thread if possible and take another value from the URLList
-                String NewURL = Crawler.get_url_URLList();
-                //check if max number of threads is reached
-                if(Crawler.start_new_crawler(NewURL))
-                {
-                    System.out.println("New thread created");
-                    //new thread is created, so take next URL if possible
-                    if(Crawler.is_empty_URLList())
-                    {
-                        //URLList is empty
-                        //TODO: terminate thread
-                        synchronized (Crawler.NumOfThreads)
-                        {
-                            Crawler.NumOfThreads--;
-                        }
-                        System.out.println("terminate 1");
-                    }
-                    else
-                    {
-                        NewURL = Crawler.get_url_URLList();
-                    }
-                }
+                String NewURL = Crawler.get_url_URLsTOCrawlPQ();
                 this.URL = NewURL;
                 crawl();
             }
@@ -112,333 +90,504 @@ public class Crawler implements Runnable {
         else
         {
             //6000 reached
-            //add URLs in URLList in htmlDocument collection
+            //add URLs in CrawledURLs file in htmlDocument collection
             Crawler.TerminateCrawler();
-            //TODO: terminate :
-                //? remove documents in db
-            System.out.println("terminate");
-        }
-
-    }
-
-
-    //* ______________________________________ Accessing URLList ______________________________________
-    //TODO get back to old add and get url list thing
-    private synchronized static String get_url_URLList()
-    {
-        synchronized (Crawler.URLList)
-        {
-            String TempURL = Crawler.URLList.get(0);
-            Crawler.URLList.remove(TempURL);
-            add_url_in_HTMLDocuments(TempURL);
-            return TempURL;
+            System.out.println("Limit is reached: terminate");
         }
     }
-    private static boolean add_url_in_URLList(String NewURL)
-    {
-        synchronized (Crawler.URLList)
-        {
-            Crawler.URLList.add(NewURL);
-            synchronized(Crawler.NumOfPages)
-            {
-                Crawler.NumOfPages ++;
-                System.out.println("Increment pages = " + Crawler.NumOfPages + "  " + NewURL);
-                //check if 6000 pages is reached
-                if(Crawler.NumOfPages < 5999)
-                {
-                    return true;
-                }
-                else
-                {
-                    // Limit is reached
-                    synchronized (Crawler.LimitReached)
-                    {
-                        Crawler.LimitReached = true;
-                    }
-                    return false;
-                }
-            }
+    private void crawl() throws IOException, URISyntaxException {
+        if (LimitReached) {
+            return;
         }
-    }
-    private static boolean is_empty_URLList()
-    {
-        synchronized (Crawler.URLList)
-        {
-            return Crawler.URLList.isEmpty();
-        }
-    }
-    private static void TerminateCrawler()
-    {
-        while(!Crawler.is_empty_URLList())
-        {
-            //Read data from the URLList
-                String NewURL = Crawler.get_url_URLList();
-        }
-    }
-    private static boolean start_new_crawler(String NewURL)
-    {
-        synchronized (Crawler.NumOfThreads)
-        {
-            if(Objects.equals(NewURL, ""))
-            {
-                return Crawler.NumOfThreads > 0;
-            }
-            if(Crawler.NumOfThreads > 0)
-            {
-                //start new crawler;
-                Crawler.NumOfThreads --;
-                Crawler NewCrawler = new Crawler(NewURL);
-                Thread NewThread = new Thread(NewCrawler);
-                NewThread.start();
-                System.out.println("crawler " + Crawler.NumOfThreads + " started");
-                return true;
-            }
-        }
-        return false;
-    }
-    //* ___________________________________ Access HTMLDocument ___________________________________
-    private synchronized static void add_url_in_HTMLDocuments(String newURL)
-    {
-        synchronized (Crawler.db)
-        {
-            MongoCollection<org.bson.Document> collection = Crawler.db.getCollection("TempDbCrawler");
-            org.bson.Document document = new org.bson.Document("URL", newURL);
-            synchronized (collection)
-            {
-                collection.insertOne(document);
-                System.out.println("Database Updated");
-            }
-        }
-    }
-    private void crawl()
-    {
         System.out.println("Start Crawling");
         System.out.println(this.URL);
         Document doc = null;
+        boolean Found = true;
         try {
             doc = Jsoup.connect(URL).get();
         } catch (IOException e) {
             System.out.println("error " + e.toString());
-
+            Found = false;
         }
-        // find all links in the HTML document
-        Elements links = doc.select("a");
-        // print out the hyperlinks
-        for (Element link : links) {
-            String href = link.attr("href");
-            if(!href.startsWith("http") && !href.startsWith("https"))
+        if(Found)
+        {
+            Elements links = doc.select("a");
+            // print out the hyperlinks
+            for (Element link : links)
             {
-                href = URL + href;
-            }
-            //new URL are ready
-            // TODO: check Robot.txt
-            // check if visited before or spam
-            try {
-                if(check_visited_spam(href))
+                if (LimitReached) {
+                    return;
+                }
+                String HyperLink = link.attr("href");
+                if (!HyperLink.startsWith("http") && !HyperLink.startsWith("https")) {
+                    HyperLink = URL + HyperLink;
+                }
+                boolean FoundHL = true;
+                Connection ConnForRobot = null;
+                try {
+                    Connection connection = Jsoup.connect(HyperLink);
+                    ConnForRobot = connection.ignoreContentType(true);
+                    doc = connection.get();
+//                    doc = Jsoup.connect(HyperLink).get();
+                } catch (IOException e) {
+                    System.out.println("error " + e.toString());
+                    FoundHL = false;
+                }
+                if(!FoundHL)
                 {
-                    // visited before or spam
-                    // the above function will add the url with its compact string in the hash table \
-                    // for it to be recognized easily if it appeared again
                     continue;
+                }
+                //Normalize URL
+                URL docUrl = new URL(doc.location());
+                URL normalizedUrl = docUrl.toURI().normalize().toURL();
+                if(!check_visited_spam(doc, normalizedUrl.toString()))
+                {
+                    //True = element added (not found)
+                    //False = element not added (found)
+                    Crawler.add_in_RefHashMap(doc ,normalizedUrl.toString(), this.URL);
+                    continue;
+                }
+                if(!check_robot_txt(HyperLink, ConnForRobot))
+                {
+                    continue;
+                }
+                if(Crawler.add_in_RefHashMap(doc ,normalizedUrl.toString(), this.URL))
+                {
+                    //Not visited before
+                    //add it to the URLsTOCrawlPG
+                    Crawler.add_url_in_URLsTOCrawlQ(HyperLink, normalizedUrl.toString());
+                    Crawler.start_new_crawler();
                 }
                 else
                 {
-                    //not visited
-                    //add it to the URLList
-                    if(LimitReached)
-                    {
-                        break;
-                    }
-                    if(!Crawler.add_url_in_URLList(href))
-                    {
-                        //* Limit is reached
-                        // if limit is reached, we won't add more URLs in the URLList,
-                        // but we will add the urls already in the URLList in the db (HTMLDocuments)
-                        // since, we guarantee that those URLs are unique
-                        break;
-                    }
-                    else
-                    {
-                        //* Limit is not reached
-                        // create a thread if possible
-                        if(Crawler.start_new_crawler(""))
-                        {
-                            // thread can be created
-                            String NewURL = Crawler.get_url_URLList();
-                            Crawler.start_new_crawler(NewURL);
-                        }
-                    }
+                    //visited
+                    continue;
                 }
-            } catch (IOException | URISyntaxException e) {
-                System.out.println("error " + e.toString());
+            }
+        }
+        //Start a new take a new url for the same crawler
+        if(!LimitReached)
+        {
+            if(!Crawler.is_empty_URLsToCrawlPQ())
+            {
+                String NewURL = Crawler.get_url_URLsTOCrawlPQ();
+                this.URL = NewURL;
+                crawl();
             }
         }
     }
-    //* __________________________________ check URL methods _______________________________
-    private static Set<String> getShingles(String text) {
-        // Break up the text into shingles of the specified size
-        Set<String> shingles = new HashSet<>();
-        for (int i = 0; i <= text.length() - Crawler.SHINGLE_SIZE; i++) {
-            String substring = text.substring(i, i + Crawler.SHINGLE_SIZE);
-            shingles.add(substring);
-        }
-        return shingles;
-    }
-    private static boolean  check_visited_spam(String NewURL) throws IOException, URISyntaxException {
-        //Normalize URL
-        Document doc = null;
-        try {
-            doc = Jsoup.connect(NewURL).get();
-        } catch (IOException e) {
-            System.out.println("error " + e.toString());
-            return true;
-        }
-        URL docUrl = new URL(doc.location());
-        URL normalizedUrl = docUrl.toURI().normalize().toURL();
-        //check if visited before:
-        synchronized (Crawler.VisitedURLsHash)
+    private static void start_new_crawler() throws IOException {
+        synchronized (Crawler.NumOfThreads)
         {
-            if (Crawler.VisitedURLsHash.containsKey(normalizedUrl.toString())) {
-                // Visited before:
+            if(Crawler.NumOfThreads > 0)
+            {
+                String NewURL = get_url_URLsTOCrawlPQ();
+                if(NewURL != null)
+                {
+                    //start new crawler;
+                    Crawler.NumOfThreads --;
+                    Crawler NewCrawler = new Crawler(NewURL);
+                    Thread NewThread = new Thread(NewCrawler);
+                    synchronized (Crawler.threads){
+                        threads.add(NewThread);
+                    }
+                    NewThread.start();
+                    System.out.println("crawler " + Crawler.NumOfThreads + " started");
+                }
+            }
+        }
+    }
+
+    //* ______________________________________ Updating Data Structures ______________________________________
+    //*____________________________ URLsToCrawl ________________________________
+    private static boolean add_in_RefHashMap(Document doc, String normalizedUrl, String href) throws URISyntaxException, MalformedURLException {
+        //Normalize URL
+        Set<String> RefURLs = new HashSet<>();
+        RefURLs.add(href);
+        synchronized (Crawler.RefURLHashMap)
+        {
+            Set<String> RefIn = Crawler.RefURLHashMap.putIfAbsent(normalizedUrl, RefURLs);
+            if(RefIn == null)
+            {
+                //Was not there before
                 return true;
             }
+            else
+            {
+                //was there before
+                // so add new href to the url
+                RefIn.add(href);
+                Crawler.RefURLHashMap.put(normalizedUrl, RefIn);
+                return false;
+            }
+        }
+    }
+    private static void add_url_in_URLsTOCrawlQ(String NewURL, String normalizedUrl) throws IOException {
+        synchronized (Crawler.URLsToCrawlQ)
+        {
+            Crawler.URLsToCrawlQ.add(NewURL);
+        }
+        synchronized (Crawler.normalizedHM)
+        {
+            Crawler.normalizedHM.put(NewURL, normalizedUrl);
+        }
+        synchronized (Crawler.NumOfPages)
+        {
+            Crawler.NumOfPages ++;
+            System.out.println("Increment pages = " + Crawler.NumOfPages + "  " + NewURL);
+            //check if 6000 pages is reached
+            if(Crawler.NumOfPages >= 500)
+            {
+                // Limit is reached
+                synchronized (Crawler.LimitReached)
+                {
+                    Crawler.LimitReached = true;
+                }
+            }
+        }
+    }
+    private static String get_url_URLsTOCrawlPQ() throws IOException {
+        synchronized (Crawler.URLsToCrawlQ)
+        {
+            if(!Crawler.URLsToCrawlQ.isEmpty())
+            {
+                String TempURL = Crawler.URLsToCrawlQ.remove();
+                add_url_in_CrawledURLs(TempURL);
+                return TempURL;
+            }
+            return null;
+        }
+    }
+    private static boolean is_empty_URLsToCrawlPQ()
+    {
+        synchronized (Crawler.URLsToCrawlQ)
+        {
+            return Crawler.URLsToCrawlQ.isEmpty();
+        }
+    }
+    private static synchronized void TerminateCrawler() throws IOException, URISyntaxException {
+        if(Crawler.Done)
+        {
+            System.out.println("Already Terminated");
+            return;
+        }
+        Crawler.Done = true;
+        System.out.println("__________________ Start Terminating ___________________________");
+        int Count = 0;
+        List<org.bson.Document> ListDoc = new ArrayList<>();
+        String URLToAdd = "";
+        synchronized (Crawler.CrawledURLsSet) {
+            Iterator<String> iterator = Crawler.CrawledURLsSet.iterator();
+            while (iterator.hasNext() && Count!=500) {
+                URLToAdd = iterator.next();
+                String normalizedUrl = Crawler.normalizedHM.get(URLToAdd);
+                // find its Ref in
+                Set<String> href = Crawler.RefURLHashMap.get(normalizedUrl);
+                if (href == null) {
+                    System.out.println("SSEEEEEEEDDDD");
+                    org.bson.Document document = new org.bson.Document();
+                    document.append("URL", URLToAdd);
+                    document.append("RefIn", new ArrayList<>());
+                    ListDoc.add(document);
+                    Count++;
+                    continue;
+                }
 
-        // not visited before
-        //* Prepare data to compare:
+                System.out.println(href);
+                //add it in db
+                org.bson.Document document = new org.bson.Document();
+                document.append("URL", URLToAdd);
+                document.append("RefIn", href);
+                ListDoc.add(document);
+                Count++;
+            }
+        }
+        synchronized (Crawler.URLsToCrawlQ) {
+            while (!Crawler.URLsToCrawlQ.isEmpty()  && Count!=500) {
+                URLToAdd = Crawler.URLsToCrawlQ.remove();
+                String normalizedUrl = Crawler.normalizedHM.get(URLToAdd);
+                // find its Ref in
+                Set<String> href = Crawler.RefURLHashMap.get(normalizedUrl);
+                if (href == null) {
+                    System.out.println("SSEEEEEEEDDDD");
+                    org.bson.Document document = new org.bson.Document();
+                    document.append("URL", URLToAdd);
+                    document.append("RefIn", new ArrayList<>());
+                    ListDoc.add(document);
+                    Count++;
+                    continue;
+                }
+
+                System.out.println(href);
+                //add it in db
+                org.bson.Document document = new org.bson.Document();
+                document.append("URL", URLToAdd);
+                document.append("RefIn", href);
+                ListDoc.add(document);
+                Count++;
+            }
+        }
+        //Set database collections
+        Crawler.mongoClient = MongoClients.create(new ConnectionString("mongodb+srv://dbUser:2hMOQwIUAWAK0ymH@cluster0.kn31lqv.mongodb.net"));
+        Crawler.db = mongoClient.getDatabase("SearchEngine-api-db");
+        Crawler.HTMLDocument = Crawler.db.getCollection("TempDbCrawler");
+        Crawler.HTMLDocument.insertMany(ListDoc);
+        System.out.println("__________________ Start Terminating ___________________________");
+    }
+
+    private static synchronized void add_url_in_CrawledURLs(String NewURL) throws IOException
+    {
+        synchronized (Crawler.CrawledURLsSet)
+        {
+            Crawler.CrawledURLsSet.add(NewURL);
+        }
+    }
+
+    // _______________________Populate data structures ______________________
+//TODO: Change
+    //Function that populates URLList by URLsToCrawlFile
+    private static void populate_URLsToCrawlPQ()
+    {
+        try {
+            FileReader fr = new FileReader("URLsToCrawl.txt");
+            BufferedReader br = new BufferedReader(fr);
+            String line;
+            while ((line = br.readLine()) != null) {
+                Crawler.URLsToCrawlQ.add(line);
+            }
+            br.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    // Function that populates VisitedURLsHash with VisitedURL file
+    private static void populate_VisitedURLsHash()
+    {
+        try {
+            FileReader fr = new FileReader("VisitedURLs.txt");
+            BufferedReader br = new BufferedReader(fr);
+            String line;
+            while ((line = br.readLine()) != null) {
+                // get the urls and the associated compact string
+                String[] parts = line.split("=");
+                String key = parts[0];
+                String value = parts[1];
+                // get the shingle set
+//                Set<Integer> ShingleSet = getHashedShingles(value);
+                // add in VisitedURLsHash
+//                Crawler.VisitedURLsHash.put(key, ShingleSet);
+            }
+            br.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    //Function that populated RefURLHashMap with RefURLFile
+    private static void populate_RefURLHashMap()
+    {
+        try {
+            FileReader fr = new FileReader("RefURLs.txt");
+            BufferedReader br = new BufferedReader(fr);
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] parts = line.split("=");
+                String key = parts[0];
+                String[] values = parts[1].split(",");
+                Set<String> set = new HashSet<>(Arrays.asList(values));
+                Crawler.RefURLHashMap.put(key, set);
+            }
+            br.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //* __________________________________ check URL methods _______________________________
+    //! ________________________________ NEW _________________________
+    private static boolean check_visited_spam(Document doc, String normalizedUrl) throws IOException, URISyntaxException {
         //Create compact string
         HtmlCompressor compressor = new HtmlCompressor();
         String compactHtml = compressor.compress(doc.text());
         compactHtml.replaceAll("[^a-zA-Z0-9]+", " ").toLowerCase();
-        // Break up the cleaned HTML content of each web page into shingles
-        Set<String> NewshingleSet = Crawler.getShingles(compactHtml);
-        //check for spam for each url in the hash table
-
-            for (String key : Crawler.VisitedURLsHash.keySet()) {
-                Set<String> OldShingleSet = Crawler.VisitedURLsHash.get(key);
-                if(is_spam(NewshingleSet, OldShingleSet))
+        //check if visited before:
+        synchronized (Crawler.VisitedURLsSet)
+        {
+            if(Crawler.VisitedURLsSet.add(normalizedUrl.toString()))
+            {
+                //True = element added (not found)
+                synchronized (Crawler.CompactStringSet)
                 {
-                    //spam
-                    //add URL in hash table
-                    Crawler.VisitedURLsHash.put(normalizedUrl.toString(), NewshingleSet);
-                    return true;
+                    return Crawler.CompactStringSet.add(compactHtml);
                 }
             }
-            // not spam
-            //add URL in hash table
-            Crawler.VisitedURLsHash.put(normalizedUrl.toString(), NewshingleSet);
-            return false;
+            else
+            {
+                //False = element not added (found)
+                return false;
+            }
         }
     }
-
-    private static double calculateJaccardSimilarity(Set<String> set1, Set<String> set2) {
-        // Calculate the Jaccard similarity between the two sets
-        Set<String> intersection = new HashSet<>(set1);
-        intersection.retainAll(set2);
-        Set<String> union = new HashSet<>(set1);
-        union.addAll(set2);
-        double jaccard = (double) intersection.size() / (double) union.size();
-        return jaccard;
-    }
-    private static boolean is_spam(Set<String> ShingleSet1, Set<String> ShingleSet2) {
-        double similarity = Crawler.calculateJaccardSimilarity(ShingleSet1, ShingleSet2);
-        // Determine if the web pages are near-duplicates
-        return similarity >= Crawler.JACCARD_SIMILARITY_THRESHOLD;
-    }
-
-    public  void JsoupExample() throws IOException, NoSuchAlgorithmException {
-        //* -------------- to normalize URL --------------
-//        String url = "https://tinyurl.com/app";
-//        Document doc = Jsoup.connect(url).get();
-//        URL normalizedUrl = new URL(doc.location());
-//        System.out.println("Normalized URL: " + normalizedUrl.toString());
-//
-        //* -------------- to get html file --------------
-//        Document html = null;
-//        String url = "https://www.google.com/search?client=firefox-b-d&q=football";
-//        try {
-//            html = Jsoup.connect(String.valueOf(url)).get();
-//            // Use the doc object to traverse and manipulate the HTML content
-////            System.out.println(html);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-        //* -------------- to remove tags --------------
-//        Document doc = Jsoup.parse(String.valueOf(html));
-//        String text = doc.text();
-
-        //* -------------- to check similarity between strings --------------
-        Document html1 = null;
-        Document html2 = null;
+    //! ________________________________ NEW _________________________
+    private static boolean check_robot_txt(String NewURL, Connection connection) {
+        boolean Found = true;
+        String path = "";
+        Document doc = null;
         try {
-            html1 = Jsoup.connect(String.valueOf("https://jsoup.org/apidocs/")).get();
-            html2 = Jsoup.connect(String.valueOf("https://jsoup.org/")).get();
-            // Use the doc object to traverse and manipulate the HTML content
-//            System.out.println(html);
+            URL urlObj = new URL(NewURL);
+            String protocol = urlObj.getProtocol();
+            String hostname = urlObj.getHost();
+            path = urlObj.getPath();
+            String rootUrl = protocol + "://" + hostname + "/robots.txt";
+            doc = Jsoup.connect(rootUrl).get();
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("error " + e.toString());
+            Found = false;
         }
-        String text1 = Jsoup.parse(String.valueOf(html1)).text();
-//        String text2 = Jsoup.parse(String.valueOf(html2)).text();
-//
-//        // Remove unwanted characters and normalize whitespace
-//        text1 = text1.replaceAll("[^a-zA-Z0-9\\s]", "").toLowerCase().replaceAll("\\s+", " ").trim();
-//        text2 = text2.replaceAll("[^a-zA-Z0-9\\s]", "").toLowerCase().replaceAll("\\s+", " ").trim();
-//
-//        // Compute the Levenshtein distance between the text content
-//        LevenshteinDistance distance = new LevenshteinDistance();
-//        double distanceValue = (double) distance.apply(text1, text2);
-//
-//        // Compute the similarity between the text content
-//        double similarity = 1 - distanceValue / Math.max(text1.length(), text2.length());
-//
-//        double similarityThreshold = 0.5;
-////        LevenshteinDistance distance = new LevenshteinDistance();
-////        double similarity = 1 - (double) distance.apply(str1, str2) / Math.max(str1.length(), str2.length());
-//        System.out.println(similarity);
-//        if (similarity >= similarityThreshold) {
-//            System.out.println("The strings are almost equal.");
-//        } else {
-//            System.out.println("The strings are not almost equal.");
-//        }
-//        Document doc = Jsoup.parse(html);
-//***************************************************************
-        // Create a new HtmlCompressor object
-        HtmlCompressor compressor = new HtmlCompressor();
+        if(!Found)
+        {
+            System.out.println("robots.txt not found");
+            return true;
+        }
 
-        // Compress the HTML document
-        assert html1 != null;
-        String compactHtml = compressor.compress(html1.text());
-
-        // Print the compact HTML string
-        System.out.println(compactHtml);
-        System.out.println(compactHtml.length());
-        System.out.println(html1.toString().length());
-
+        String robotsTxt = doc.text();
+        String DisallowString = "Disallow: ";
+        String UserAgentString = "User-agent: ";
+        int UserAgentIndex = robotsTxt.indexOf(UserAgentString);
+        if(UserAgentIndex != -1)
+        {
+            if(robotsTxt.charAt(UserAgentIndex + UserAgentString.length() + 1) == '*')
+            {
+                //check the disallowed
+                int IndexFound = 0;
+                while((IndexFound = robotsTxt.indexOf(DisallowString, IndexFound)) != -1)
+                {
+                    IndexFound = IndexFound + DisallowString.length();
+                    int EndIndex = robotsTxt.indexOf(' ', IndexFound);
+                    if(EndIndex == -1)      //it is the last disallow
+                    {
+                        EndIndex = robotsTxt.length();
+                    }
+                    String directory = robotsTxt.substring(IndexFound, EndIndex).trim();
+                    // Create a Pattern object from the regex string
+                    if(directory.indexOf('*') != -1)
+                    {
+                        directory = directory.replace("*", ".*");
+                        Pattern pattern = Pattern.compile(directory);
+                        Matcher matcher = pattern.matcher(path);
+                        if (matcher.find())
+                        {
+                            System.out.println(NewURL + " disallowed");
+                            return false;
+                        }
+                    }
+                    if(directory.endsWith("$"))
+                    {
+                        //check directory is at the end of the path
+                        if(path.endsWith(directory))
+                        {
+                            System.out.println(NewURL + " disallowed");
+                            return false;
+                        }
+                    }
+                    else
+                    {
+                        if(path.startsWith(directory))
+                        {
+                            System.out.println(NewURL + " disallowed");
+                            return false;
+                        }
+                    }
+                }
+                System.out.println(NewURL + " allowed");
+                return true;
+            }
+            else
+            {
+                System.out.println(NewURL + " allowed");
+                return true;
+            }
+        }
+        System.out.println(NewURL + " allowed");
+        return true;
     }
-    public static void main(String[] args) throws IOException, NoSuchAlgorithmException, URISyntaxException {
+    //* _______________________________ Main ___________________________________
+    public static void main(String[] args) throws IOException, NoSuchAlgorithmException, URISyntaxException
+    {
         // Initializing static variables
-        // TODO: take number of threads from user as input
+        // take number of threads from user as input and set NumOfThreads
+        //! Uncomment
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.print("Enter maximum number of threads: ");
+//        Crawler.NumOfThreads = scanner.nextInt() -1;
+//        scanner.close();
+        //! Comment
+        //!NEW
+        Crawler.CompactStringSet = new HashSet<>();
+        Crawler.VisitedURLsSet = new HashSet<>();
+        Crawler.CrawledURLsSet = new HashSet<>();
+
         Crawler.NumOfThreads = 10;
-        Crawler.mongoClient = MongoClients.create(new ConnectionString("mongodb+srv://dbUser:2hMOQwIUAWAK0ymH@cluster0.kn31lqv.mongodb.net"));
-        Crawler.db = mongoClient.getDatabase("SearchEngine-api-db");
+        //Set files
+        Crawler.URLsToCrawlQ = new LinkedList<String>();
+        Crawler.LimitReached = false;
+        //Initialize data structures
+        Crawler.RefURLHashMap = new HashMap<>();
         Crawler.VisitedURLsHash = new HashMap<>();
-        Crawler.URLList = new ArrayList<>();
-        String url = "https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Lists_of_topics";
-        Crawler.URLList.add(url);
-        Crawler.check_visited_spam(url);
-        // add URL in db
-        Crawler.add_url_in_HTMLDocuments(url);
-        //TODO: get the list of urls from db and check if empty, add seed. if not, add it to the list
-        String StartURL =  Crawler.URLList.get(0);
-        Crawler.URLList.remove(StartURL);
-        Crawler crawler = new Crawler(StartURL);
-        Thread InitialThread = new Thread(crawler);
-        InitialThread.start();
+        Crawler.normalizedHM = new HashMap<>();
+
+        int NumOfCrawledURLs = 0;
+        int NumOfVisitedURLs = 0;
+        if(NumOfCrawledURLs == 0)
+        {
+            //TODO: and empty db or do it manually
+            //Seed set
+            Set<String> SeedSet = new HashSet<>();
+            SeedSet.add("https://www.imdb.com/");
+            SeedSet.add("https://edition.cnn.com/");
+            SeedSet.add("https://www.pinterest.com/");
+            SeedSet.add("https://stackoverflow.com/");
+
+            for (String Seed: SeedSet)
+            {
+                Document doc = null;
+                boolean Found = true;
+                try {
+                    doc = Jsoup.connect(Seed).get();
+                } catch (IOException e) {
+                    System.out.println("error " + e.toString());
+                    Found = false;
+                }
+                if(!Found) continue;
+                URL docUrl = new URL(doc.location());
+                URL normalizedUrl = docUrl.toURI().normalize().toURL();
+                Crawler.add_url_in_URLsTOCrawlQ(Seed, normalizedUrl.toString());
+            }
+        }
+        else if(NumOfVisitedURLs == 0)
+        {
+            //fill data structures
+            Crawler.populate_URLsToCrawlPQ();
+            Crawler.populate_RefURLHashMap();
+            //continue populating db with Crawled URLs
+            Crawler.TerminateCrawler();
+        }
+        else
+        {
+            // populates data structures
+            Crawler.populate_VisitedURLsHash();
+            Crawler.populate_URLsToCrawlPQ();
+            Crawler.populate_RefURLHashMap();
+            //initialize number of pages
+            Crawler.NumOfPages = NumOfCrawledURLs;
+        }
+
+        // Start initial thread
+        start_new_crawler();
     }
 }
 
 /*
-TODO: add another collection for crawler list, and for the compact strings
+add another collection for crawler list, and for the compact strings
 Data members
 ! Static:
     * number of threads
@@ -509,6 +658,18 @@ Data members
 //* long numDocuments = collection.countDocuments();    //to get the number of documents in a collection4
 //* hashtable.put("apple", 1);                          //add
 //* int value = hashtable.get("banana");                //retrieve
+
+/*
+String key = "Shingles";
+    String[] ShingleList = {"value1", "value2", "value3"};
+
+    Document document = new Document("URL", "https//fsdfsdf.com")
+            .append(key, Arrays.asList(valuesToAdd));
+
+      collection.insertOne(document);
+*/
+
+
 /*
  for (String key : hashTable.keySet()) {
     Integer value = hashTable.get(key);
