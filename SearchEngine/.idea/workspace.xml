@@ -6,6 +6,37 @@
   <component name="ChangeListManager">
     <list default="true" id="d2d76bb6-0197-400f-ac29-4d73ea0468f9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/Indexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/Indexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/MyApplicationRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/MyApplicationRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/Ranker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/Ranker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/SearchEngineApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/SearchEngineApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/Website.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/Website.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/Word.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/Word.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/WordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/WordController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/WordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/WordService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/phraseSearching.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/phraseSearching.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/popularity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/popularity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/Indexer$Data.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/Indexer$Data.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/Indexer$Word.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/Indexer$Word.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/Indexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/Indexer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/MyApplicationRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/MyApplicationRunner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/Ranker$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/Ranker$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/Ranker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/Ranker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/SearchEngineApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/SearchEngineApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/Website.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/Website.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/Word.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/Word.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/WordController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/WordController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/WordService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/WordService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/phraseSearching.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/phraseSearching.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/popularity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/popularity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../search-engine_front-end/src/ResultsPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/../search-engine_front-end/src/ResultsPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../search-engine_front-end/src/ResultsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../search-engine_front-end/src/ResultsPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../search-engine_front-end/src/SearchArea.js" beforeDir="false" afterPath="$PROJECT_DIR$/../search-engine_front-end/src/SearchArea.js" afterDir="false" />
+    </list>
+    <list id="8742363f-5f0c-4946-b70f-48a361939efa" name="Changes by Bassant" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/WordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/WordService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/phraseSearching.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/phraseSearching.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +53,41 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/WordService.java">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="3" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
+        <range start1="3" end1="3" start2="4" end2="8" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
+        <range start1="5" end1="5" start2="10" end2="11" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
+        <range start1="8" end1="8" start2="14" end2="16" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
+        <range start1="15" end1="15" start2="23" end2="32" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
+        <range start1="38" end1="38" start2="55" end2="64" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
+        <range start1="41" end1="41" start2="67" end2="68" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
+        <range start1="44" end1="45" start2="71" end2="71" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
+        <range start1="46" end1="47" start2="72" end2="72" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
+        <range start1="49" end1="50" start2="74" end2="74" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
+        <range start1="52" end1="53" start2="76" end2="80" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
+        <range start1="71" end1="73" start2="98" end2="101" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
+        <range start1="75" end1="76" start2="103" end2="106" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
+        <range start1="80" end1="84" start2="110" end2="114" changelist="8742363f-5f0c-4946-b70f-48a361939efa" />
+        <range start1="88" end1="115" start2="118" end2="118" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/phraseSearching.java">
+      <ranges>
+        <range start1="5" end1="5" start2="5" end2="12" changelist="8742363f-5f0c-4946-b70f-48a361939efa" />
+        <range start1="7" end1="7" start2="14" end2="17" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
+        <range start1="10" end1="10" start2="20" end2="21" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
+        <range start1="13" end1="14" start2="24" end2="24" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
+        <range start1="28" end1="28" start2="38" end2="39" changelist="8742363f-5f0c-4946-b70f-48a361939efa" />
+        <range start1="29" end1="30" start2="40" end2="45" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
+        <range start1="31" end1="32" start2="46" end2="51" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
+        <range start1="33" end1="34" start2="52" end2="57" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
+        <range start1="35" end1="38" start2="58" end2="73" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
+        <range start1="40" end1="40" start2="75" end2="76" changelist="8742363f-5f0c-4946-b70f-48a361939efa" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -44,22 +110,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/college/Spring 2023/APT/porter-stemmer-1.4.jar&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/sohad/Downloads/htmlcompressor-1.4.jar",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn install" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Indexer">
+    <configuration name="Indexer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.CUSearchEngine.SearchEngine.Indexer" />
+      <module name="SearchEngine" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.CUSearchEngine.SearchEngine.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SearchEngineApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.CUSearchEngine.SearchEngine.SearchEngineApplication" />
       <module name="SearchEngine" />
@@ -75,6 +154,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Indexer" />
         <item itemvalue="Application.SearchEngineApplication" />
       </list>
     </recent_temporary>

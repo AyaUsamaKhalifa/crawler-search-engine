@@ -1,11 +1,19 @@
 package com.CUSearchEngine.SearchEngine;
 
+import org.bson.Document;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.core.MongoOperations;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 import org.tartarus.snowball.ext.porterStemmer;
+import com.CUSearchEngine.SearchEngine.Config;
 
 import java.io.IOException;
 import java.util.*;
+
+import static java.lang.Math.log;
 
 @Service
 public class WordService {
@@ -13,6 +21,15 @@ public class WordService {
     @Autowired
     //Reference for the repository
     private WordRepository cursor;
+    @Autowired
+    private MongoTemplate mongoTemplate;
+    @Autowired
+    private MongoOperations mongoOps;
+
+
+    private double calc_IDF(long num_docs,long num_docs_word) {
+        return (log((double)num_docs / num_docs_word)) / log(2);
+    }
     private List<String> stemWords(String searchSentence){
         HashSet<String> stopWords = new HashSet<>(Arrays.asList("a","about","above","after","again","against","all","am","an","and","any","are","aren't","as","at","be","because","been","before","being","below","between","both","but","by","can't","cannot","could","couldn't",
                 "did","didn't","do","does","doesn't","doing","don't","down","during","each","few","for","from","further","had","hadn't","has","hasn't","have","haven't","having","he","he'd","he'll","he's","her","here","here's","hers","herself",
@@ -36,21 +53,31 @@ public class WordService {
         }
         return  arrOfWordsList;
     }
+    private long noOfDocuments() {
+        Query query = new Query(Criteria.where("name").is("indexed"));
+        List<String> indexedUrlsList = (List<String>)mongoOps.findOne(query, Document.class, "InvertedFiles").get("indexedurls");
+        return indexedUrlsList.size();
+    }
+//    public Document getPopularity(String URLVal) {
+//        Query query = new Query(Criteria.where("url").is(URLVal));
+//        return mongoOps.findOne(query, Document.class, "URLPopularity");
+//    }
     //Access data methods
     public List<RankedURLs> getWord(String word) throws IOException {
         //To Do add the stemmed words
+        long sizeDocuments = noOfDocuments();
         List<String> words = stemWords(word);
         Ranker ranker = new Ranker();
         for (int i = 0; i < words.size(); i++) {
-            //System.out.println("word "+words.get(i));
             if(words.get(i).charAt(0) != '\"') {
-                System.out.println(words.get(i).charAt(0));
                 Optional<Word> currWord = cursor.findByWord(words.get(i).toLowerCase());
                 if (currWord.isPresent()) {
-                    System.out.println("word " + currWord.get().word);
                     for (int j = 0; j < currWord.get().getData().size(); j++) {
                         //To Do change the word to be the stemmed value
-                        ranker.rank(currWord.get().getData().get(j), words.get(i).toLowerCase());
+                        //Document popularity = getPopularity(currWord.get().getData().get(j).URL);
+                        if(Config.popularity.containsKey(currWord.get().getData().get(j).URL)) {
+                            ranker.rank(currWord.get().getData().get(j), currWord.get().getIDF(), Config.popularity.get(currWord.get().getData().get(j).URL), words.get(i).toLowerCase());
+                        }
                     }
                 }
             }
@@ -69,46 +96,22 @@ public class WordService {
                         websites.add(currWord.get());
                     }
                 }
-                System.out.println(websites);
-                List<Website>resultedWebsites = phrase.makingPhraseSearching(originalPhrase, websites);
+                List<Website>resultedWebsites = phrase.makingPhraseSearching(originalPhrase.toLowerCase(), websites);
+
+                double idfPhrase = calc_IDF(sizeDocuments, resultedWebsites.size());
                 for (int j = 0; j < resultedWebsites.size(); j++) {
                     //To Do change the word to be the stemmed value
-                    ranker.rank(resultedWebsites.get(j), '\"' + originalPhrase.toLowerCase()+'\"');
+                    if(Config.popularity.containsKey(resultedWebsites.get(i).URL)) {
+                        ranker.rankPhraseSearching(resultedWebsites.get(j), idfPhrase, Config.popularity.get(resultedWebsites.get(i).URL), '\"' + originalPhrase.toLowerCase() + '\"');
+                    }
                 }
             }
         }
         List<RankedURLs> rankedWebsites = ranker.sortData();
-        for (int i = 0; i < rankedWebsites.size(); i++) {
-            System.out.println("title" + rankedWebsites.get(i).title);
-            System.out.println(rankedWebsites.get(i).rank);
-        }
+//        for (int i = 0; i < rankedWebsites.size(); i++) {
+//            System.out.println("title" + rankedWebsites.get(i).title);
+//            System.out.println(rankedWebsites.get(i).rank);
+//        }
         return rankedWebsites;
     }
 }
-
-//        if(currWord.isPresent())
-//        {
-//            System.out.println(currWord.get().getWord());
-//            for(int i = 0; i < currWord.get().getData().size(); i++)
-//            {
-//                System.out.println("title "+currWord.get().getData().get(i).title);
-//                System.out.println("paragraph "+currWord.get().getData().get(i).paragraph);
-//                System.out.println(currWord.get().getData().get(i).H1);
-//                System.out.println(currWord.get().getData().get(i).H2);
-//                System.out.println(currWord.get().getData().get(i).H3);
-//                System.out.println(currWord.get().getData().get(i).H4);
-//                System.out.println(currWord.get().getData().get(i).H5);
-//                System.out.println(currWord.get().getData().get(i).H6);
-//                System.out.println(currWord.get().getData().get(i).TF);
-//                System.out.println(currWord.get().getData().get(i).IDF);
-//                System.out.println(currWord.get().getData().get(i).noOccBold);
-//                System.out.println(currWord.get().getData().get(i).noOccTitle);
-//                System.out.println(currWord.get().getData().get(i).totalOcc);
-//            }
-//            return "word successfully found";
-//
-//        }
-//        else
-//        {
-//            return "word not found";
-//        }

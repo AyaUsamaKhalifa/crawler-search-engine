@@ -59,14 +59,14 @@ function SearchArea() {
       searchText !== undefined &&
       typeof searchText !== "string"
     ) {
-      console.log(searchText.title);
+      //console.log(searchText.title);
       navigate(`/${searchText.title}`);
       axios
         .post("http://localhost:8081/PopularSearches", {
           title: `${searchText.title}`,
         })
         .then((response) => {
-          console.log(response.data);
+          //console.log(response.data);
         })
         .catch((error) => {
           console.log(error);
@@ -74,15 +74,15 @@ function SearchArea() {
       setSearchText("");
       
     } else if (searchInput !== "" && searchInput !== null) {
-      console.log(searchInput);
+      //console.log(searchInput);
       navigate(`/${searchInput}`);
-      console.log(`/${searchInput}`);
+      //console.log(`/${searchInput}`);
       axios
         .post("http://localhost:8081/PopularSearches", {
           title: `${searchInput}`,
         })
         .then((response) => {
-          console.log(response.data);
+          //console.log(response.data);
         })
         .catch((error) => {
           console.log(error);

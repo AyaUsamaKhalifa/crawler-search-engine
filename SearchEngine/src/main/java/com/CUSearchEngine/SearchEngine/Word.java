@@ -22,5 +22,6 @@ public class Word {
     @Id
     public ObjectId id;
     public String word;
+    public double IDF;
     public List<Website> data;
 }

@@ -9,13 +9,17 @@ import axios from "axios";
 
 function ResultsPage() {
   const [searchResult, setSearchResults] = React.useState([]);
+  const [timer, setTimer] = React.useState(0);
   let { SearchResult } = useParams();
   React.useEffect(() => {
+    const start = performance.now();
     (async () => {
       await axios.get(`http://localhost:8081/SearchResults/${encodeURIComponent(SearchResult)}`)
         .then((response) => {
           setSearchResults(response.data);
-          console.log(response.data);
+          const end = performance.now();
+          setTimer(end - start);
+          //console.log(response.data);
         })
         .catch((error) => {
           console.error(error);
@@ -30,6 +34,7 @@ function ResultsPage() {
         </Link>
           <SearchArea SearchResults={searchResult} />
       </div>
+      <div className="timer">The search took {timer/1000} seconds</div>
       <ResultsArea websiteInfo={searchResult} />
     </div>
   );

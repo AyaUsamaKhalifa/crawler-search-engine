@@ -27,17 +27,29 @@ public class Ranker {
          returnedData = new HashMap<>();
      }
 
-    private  Integer rankCalc(double TF, double IDF, double h1, double h2, double h3, double h4, double h5, double h6,double titleOcc,double boldOcc, double popularity)
+    private  Integer rankCalc(double TF, double IDF, double h1, double h2, double h3, double h4, double h5, double h6,double titleOcc,double boldOcc, double popularity, HashSet<String> originalWords, String word)
     {
        double TFAndIDf = TF * IDF;
-       int rank = (int) Math.round((TFAndIDf + h1 * header1Weight + h2 * header2Weight + h3 * header3Weight + h4 * header4Weight + h5 * header5Weight + h6 *header6Weight + titleOcc * titleOccWeight + boldOcc * boldOccWeight) * popularity);
+       if(originalWords.contains(word))
+       {
+           int rank = (int) Math.round((TFAndIDf + h1 * header1Weight + h2 * header2Weight + h3 * header3Weight + h4 * header4Weight + h5 * header5Weight + h6 *header6Weight + titleOcc * titleOccWeight + boldOcc * boldOccWeight) * popularity*2000);
+//           System.out.println((TFAndIDf + h1 * header1Weight + h2 * header2Weight + h3 * header3Weight + h4 * header4Weight + h5 * header5Weight + h6 *header6Weight + titleOcc * titleOccWeight + boldOcc * boldOccWeight) * popularity*1000);
+//           System.out.println(rank);
+           return rank;
+       }
+       else
+       {
+           int rank = (int) Math.round((TFAndIDf + h1 * header1Weight + h2 * header2Weight + h3 * header3Weight + h4 * header4Weight + h5 * header5Weight + h6 *header6Weight + titleOcc * titleOccWeight + boldOcc * boldOccWeight) * popularity*1000);
+//           System.out.println((TFAndIDf + h1 * header1Weight + h2 * header2Weight + h3 * header3Weight + h4 * header4Weight + h5 * header5Weight + h6 *header6Weight + titleOcc * titleOccWeight + boldOcc * boldOccWeight) * popularity*1000);
+//           System.out.println(rank);
+           return rank;
+       }
 
-       return Integer.valueOf(rank);
     }
-    public void rank(Website website, String word) {
+    public void rank(Website website, double IDFVal, double popularity, String word) {
 
         double TF = website.TF;
-        double IDF = website.IDF;
+        double IDF = IDFVal;
         double boldOcc = (double) website.noOccBold;
         double H1 = (double) website.H1;
         double H2 = (double)website.H2;
@@ -47,7 +59,28 @@ public class Ranker {
         double H6 = (double) website.H6;
         double titleOcc = (double) website.noOccTitle;
 
-        Integer calculatedRank = rankCalc(TF, IDF, H1, H2, H3, H4, H5, H6, titleOcc, boldOcc, 1);
+        Integer calculatedRank = rankCalc(TF, IDF, H1, H2, H3, H4, H5, H6, titleOcc, boldOcc, popularity, website.originalWords, word);
+        String URL = website.URL;
+
+        if (returnedData.containsKey(URL)) {
+            RankedURLs URLRank = returnedData.get(URL);
+            returnedData.remove(URL);
+            URLRank.rank += calculatedRank;
+            URLRank.searchedWords.add(word);
+            returnedData.put(URL, URLRank);
+        } else {
+            List<String> words = new ArrayList<>();
+            words.add(word);
+            RankedURLs URLMapEntry = new RankedURLs(website.title, website.URL, website.paragraph, calculatedRank, words);
+            returnedData.put(URL, URLMapEntry);
+        }
+    }
+    public void rankPhraseSearching(Website website, double IDFVal, double popularity, String word) {
+
+        double TF = website.TF;
+        double IDF = IDFVal;
+
+        Integer calculatedRank = Integer.valueOf((int) Math.round(TF * IDF * popularity * 100));
         String URL = website.URL;
 
         if (returnedData.containsKey(URL)) {
