@@ -30,25 +30,27 @@ import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+
+import java.io.IOException;
+import java.net.URL;
+import crawlercommons.robots.BaseRobotRules;
+import crawlercommons.robots.SimpleRobotRulesParser;
+
+
 public class Crawler implements Runnable {
     //* Static data members:
+    private static final int TOTALNUMPAGES = 6000;
     private static Set<Thread> threads = new HashSet<>();
-    private static final int SHINGLE_SIZE = 5;
-    private static final double JACCARD_SIMILARITY_THRESHOLD = 0.85;
     private static MongoClient mongoClient;
     private static MongoDatabase db;
     private static MongoCollection<org.bson.Document> HTMLDocument;
-    private static FileWriter CrawledURLsFile;
     private static HashMap<String, Set<String>> RefURLHashMap;
-    private static FileWriter RefURLsFile;
-    private static HashMap<String, Set<Integer>> VisitedURLsHash;
+    private static int Count = 0;
     private static Set<String> VisitedURLsSet;  //!NEW
     private static Set<String> CompactStringSet;    //!NEW
     private static HashMap<String, String> normalizedHM;
     private static Set<String> CrawledURLsSet;
     private static Queue<String> URLsToCrawlQ;  //!NEW
-    private static FileWriter URLsToCrawlFile;
-    private static FileWriter VisitedURLsFile;
     private static Integer NumOfThreads;
     private static Boolean LimitReached;
     private static Integer NumOfPages = 0;
@@ -109,6 +111,7 @@ public class Crawler implements Runnable {
             System.out.println("error " + e.toString());
             Found = false;
         }
+
         if(Found)
         {
             Elements links = doc.select("a");
@@ -123,12 +126,8 @@ public class Crawler implements Runnable {
                     HyperLink = URL + HyperLink;
                 }
                 boolean FoundHL = true;
-                Connection ConnForRobot = null;
                 try {
-                    Connection connection = Jsoup.connect(HyperLink);
-                    ConnForRobot = connection.ignoreContentType(true);
-                    doc = connection.get();
-//                    doc = Jsoup.connect(HyperLink).get();
+                    doc = Jsoup.connect(HyperLink).get();
                 } catch (IOException e) {
                     System.out.println("error " + e.toString());
                     FoundHL = false;
@@ -147,7 +146,7 @@ public class Crawler implements Runnable {
                     Crawler.add_in_RefHashMap(doc ,normalizedUrl.toString(), this.URL);
                     continue;
                 }
-                if(!check_robot_txt(HyperLink, ConnForRobot))
+                if(!check_robot_txt(HyperLink))
                 {
                     continue;
                 }
@@ -192,6 +191,7 @@ public class Crawler implements Runnable {
                         threads.add(NewThread);
                     }
                     NewThread.start();
+                    Crawler.start_new_crawler();
                     System.out.println("crawler " + Crawler.NumOfThreads + " started");
                 }
             }
@@ -236,7 +236,7 @@ public class Crawler implements Runnable {
             Crawler.NumOfPages ++;
             System.out.println("Increment pages = " + Crawler.NumOfPages + "  " + NewURL);
             //check if 6000 pages is reached
-            if(Crawler.NumOfPages >= 500)
+            if(Crawler.NumOfPages >= TOTALNUMPAGES)
             {
                 // Limit is reached
                 synchronized (Crawler.LimitReached)
@@ -273,12 +273,11 @@ public class Crawler implements Runnable {
         }
         Crawler.Done = true;
         System.out.println("__________________ Start Terminating ___________________________");
-        int Count = 0;
         List<org.bson.Document> ListDoc = new ArrayList<>();
         String URLToAdd = "";
         synchronized (Crawler.CrawledURLsSet) {
             Iterator<String> iterator = Crawler.CrawledURLsSet.iterator();
-            while (iterator.hasNext() && Count!=500) {
+            while (iterator.hasNext() && Crawler.Count!=TOTALNUMPAGES) {
                 URLToAdd = iterator.next();
                 String normalizedUrl = Crawler.normalizedHM.get(URLToAdd);
                 // find its Ref in
@@ -289,7 +288,7 @@ public class Crawler implements Runnable {
                     document.append("URL", URLToAdd);
                     document.append("RefIn", new ArrayList<>());
                     ListDoc.add(document);
-                    Count++;
+                    Crawler.Count++;
                     continue;
                 }
 
@@ -299,11 +298,11 @@ public class Crawler implements Runnable {
                 document.append("URL", URLToAdd);
                 document.append("RefIn", href);
                 ListDoc.add(document);
-                Count++;
+                Crawler.Count++;
             }
         }
         synchronized (Crawler.URLsToCrawlQ) {
-            while (!Crawler.URLsToCrawlQ.isEmpty()  && Count!=500) {
+            while (!Crawler.URLsToCrawlQ.isEmpty()  && Crawler.Count!=TOTALNUMPAGES) {
                 URLToAdd = Crawler.URLsToCrawlQ.remove();
                 String normalizedUrl = Crawler.normalizedHM.get(URLToAdd);
                 // find its Ref in
@@ -314,7 +313,7 @@ public class Crawler implements Runnable {
                     document.append("URL", URLToAdd);
                     document.append("RefIn", new ArrayList<>());
                     ListDoc.add(document);
-                    Count++;
+                    Crawler.Count++;
                     continue;
                 }
 
@@ -324,15 +323,33 @@ public class Crawler implements Runnable {
                 document.append("URL", URLToAdd);
                 document.append("RefIn", href);
                 ListDoc.add(document);
-                Count++;
+                Crawler.Count++;
             }
         }
-        //Set database collections
-        Crawler.mongoClient = MongoClients.create(new ConnectionString("mongodb+srv://dbUser:2hMOQwIUAWAK0ymH@cluster0.kn31lqv.mongodb.net"));
-        Crawler.db = mongoClient.getDatabase("SearchEngine-api-db");
-        Crawler.HTMLDocument = Crawler.db.getCollection("TempDbCrawler");
-        Crawler.HTMLDocument.insertMany(ListDoc);
-        System.out.println("__________________ Start Terminating ___________________________");
+        if(ListDoc.size() != 0)
+        {
+            //Set database collections
+            Crawler.mongoClient = MongoClients.create(new ConnectionString("mongodb+srv://samiha:Owxx9hDm5NFC4ANa@cluster0.4nczz1o.mongodb.net/7"));
+            Crawler.db = mongoClient.getDatabase("SearchEngine-api-db");
+//            Crawler.HTMLDocument = Crawler.db.getCollection("TempDbCrawler");
+            Crawler.HTMLDocument = Crawler.db.getCollection("TempDbCrawler2");
+            Crawler.HTMLDocument.insertMany(ListDoc);
+            Crawler.mongoClient.close();
+        }
+
+        MongoClient CrawlerClient = MongoClients.create("mongodb+srv://samiha:Owxx9hDm5NFC4ANa@cluster0.4nczz1o.mongodb.net/7");
+        MongoDatabase Crawlerdb = CrawlerClient.getDatabase("crawler-intermediate-data");
+        MongoCollection<org.bson.Document> VisitedURLsC = Crawlerdb.getCollection("VisitedURLs");
+        VisitedURLsC.deleteMany(new org.bson.Document());
+        MongoCollection<org.bson.Document> RefInURLsC = Crawlerdb.getCollection("RefInURLs");
+        RefInURLsC.deleteMany(new org.bson.Document());
+        MongoCollection<org.bson.Document> NormalizedURLsC = Crawlerdb.getCollection("NormalizedURLs");
+        NormalizedURLsC.deleteMany(new org.bson.Document());
+        MongoCollection<org.bson.Document> URLsToCrawlC = Crawlerdb.getCollection("URLsToCrawl");
+        URLsToCrawlC.deleteMany(new org.bson.Document());
+        MongoCollection<org.bson.Document> VisitedCompactStringsC = Crawlerdb.getCollection("VisitedCompactStrings");
+        VisitedCompactStringsC.deleteMany(new org.bson.Document());
+        System.out.println("__________________ END Terminating ___________________________");
     }
 
     private static synchronized void add_url_in_CrawledURLs(String NewURL) throws IOException
@@ -340,65 +357,6 @@ public class Crawler implements Runnable {
         synchronized (Crawler.CrawledURLsSet)
         {
             Crawler.CrawledURLsSet.add(NewURL);
-        }
-    }
-
-    // _______________________Populate data structures ______________________
-//TODO: Change
-    //Function that populates URLList by URLsToCrawlFile
-    private static void populate_URLsToCrawlPQ()
-    {
-        try {
-            FileReader fr = new FileReader("URLsToCrawl.txt");
-            BufferedReader br = new BufferedReader(fr);
-            String line;
-            while ((line = br.readLine()) != null) {
-                Crawler.URLsToCrawlQ.add(line);
-            }
-            br.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-    // Function that populates VisitedURLsHash with VisitedURL file
-    private static void populate_VisitedURLsHash()
-    {
-        try {
-            FileReader fr = new FileReader("VisitedURLs.txt");
-            BufferedReader br = new BufferedReader(fr);
-            String line;
-            while ((line = br.readLine()) != null) {
-                // get the urls and the associated compact string
-                String[] parts = line.split("=");
-                String key = parts[0];
-                String value = parts[1];
-                // get the shingle set
-//                Set<Integer> ShingleSet = getHashedShingles(value);
-                // add in VisitedURLsHash
-//                Crawler.VisitedURLsHash.put(key, ShingleSet);
-            }
-            br.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-    //Function that populated RefURLHashMap with RefURLFile
-    private static void populate_RefURLHashMap()
-    {
-        try {
-            FileReader fr = new FileReader("RefURLs.txt");
-            BufferedReader br = new BufferedReader(fr);
-            String line;
-            while ((line = br.readLine()) != null) {
-                String[] parts = line.split("=");
-                String key = parts[0];
-                String[] values = parts[1].split(",");
-                Set<String> set = new HashSet<>(Arrays.asList(values));
-                Crawler.RefURLHashMap.put(key, set);
-            }
-            br.close();
-        } catch (IOException e) {
-            e.printStackTrace();
         }
     }
 
@@ -428,7 +386,7 @@ public class Crawler implements Runnable {
         }
     }
     //! ________________________________ NEW _________________________
-    private static boolean check_robot_txt(String NewURL, Connection connection) {
+    private static boolean check_robot_txt(String NewURL) throws MalformedURLException {
         boolean Found = true;
         String path = "";
         Document doc = null;
@@ -448,14 +406,16 @@ public class Crawler implements Runnable {
             System.out.println("robots.txt not found");
             return true;
         }
-
         String robotsTxt = doc.text();
+
         String DisallowString = "Disallow: ";
         String UserAgentString = "User-agent: ";
         int UserAgentIndex = robotsTxt.indexOf(UserAgentString);
         if(UserAgentIndex != -1)
         {
-            if(robotsTxt.charAt(UserAgentIndex + UserAgentString.length() + 1) == '*')
+//            if(robotsTxt.charAt(UserAgentIndex + UserAgentString.length() + 1) == '*')
+            String userAgents = robotsTxt.substring(UserAgentIndex + UserAgentString.length() + 1);
+            if (userAgents.contains("*"))
             {
                 //check the disallowed
                 int IndexFound = 0;
@@ -467,7 +427,16 @@ public class Crawler implements Runnable {
                     {
                         EndIndex = robotsTxt.length();
                     }
-                    String directory = robotsTxt.substring(IndexFound, EndIndex).trim();
+                    String directory = "";
+                    if (IndexFound >= 0 && EndIndex >= IndexFound && EndIndex <= robotsTxt.length())
+                    {
+                        directory = robotsTxt.substring(IndexFound, EndIndex).trim();
+                    }
+                    else
+                    {
+                        continue;
+                    }
+
                     // Create a Pattern object from the regex string
                     if(directory.indexOf('*') != -1)
                     {
@@ -510,6 +479,245 @@ public class Crawler implements Runnable {
         System.out.println(NewURL + " allowed");
         return true;
     }
+    //* ______________________ Exiting ___________________
+    private static void exit_crawler() throws IOException, URISyntaxException {
+        //if the limit is already reached
+        if(Crawler.LimitReached)
+        {
+            Crawler.Done = false;
+            Crawler.TerminateCrawler();
+        }
+        else
+        {
+            // Save what is in the crawled URLs to HTMLDocuments
+            List<org.bson.Document> ListDoc = new ArrayList<>();
+            Iterator<String> iterator = Crawler.CrawledURLsSet.iterator();
+            String URLToAdd = "";
+            while (iterator.hasNext()) {
+                URLToAdd = iterator.next();
+                String normalizedUrl = Crawler.normalizedHM.get(URLToAdd);
+                // find its Ref in
+                Set<String> href = Crawler.RefURLHashMap.get(normalizedUrl);
+                if (href == null) {
+                    org.bson.Document document = new org.bson.Document();
+                    document.append("URL", URLToAdd);
+                    document.append("RefIn", new ArrayList<>());
+                    ListDoc.add(document);
+                    continue;
+                }
+                //add it in db
+                org.bson.Document document = new org.bson.Document();
+                document.append("URL", URLToAdd);
+                document.append("RefIn", href);
+                ListDoc.add(document);
+            }
+            //Add it to database
+            Crawler.mongoClient = MongoClients.create(new ConnectionString("mongodb+srv://samiha:Owxx9hDm5NFC4ANa@cluster0.4nczz1o.mongodb.net/7"));
+            Crawler.db = mongoClient.getDatabase("SearchEngine-api-db");
+//            Crawler.HTMLDocument = Crawler.db.getCollection("TempDbCrawler");
+            Crawler.HTMLDocument = Crawler.db.getCollection("TempDbCrawler2");
+            Crawler.HTMLDocument.insertMany(ListDoc);
+            Crawler.mongoClient.close();
+            //*__________________________________________________________________________________________
+            // Save the visited URLs set
+            List<org.bson.Document> ListDoc1 = new ArrayList<>();
+            Iterator<String> iterator1 = Crawler.VisitedURLsSet.iterator();
+            URLToAdd = "";
+            while (iterator1.hasNext()) {
+                URLToAdd = iterator1.next();
+                //add it in db
+                org.bson.Document document = new org.bson.Document();
+                document.append("URL", URLToAdd);
+                ListDoc1.add(document);
+            }
+            //Add it to database
+            MongoClient CrawlerClient = MongoClients.create("mongodb+srv://samiha:Owxx9hDm5NFC4ANa@cluster0.4nczz1o.mongodb.net/7");
+            MongoDatabase Crawlerdb = CrawlerClient.getDatabase("crawler-intermediate-data");
+            MongoCollection<org.bson.Document> VisitedURLsC = Crawlerdb.getCollection("VisitedURLs");
+            VisitedURLsC.insertMany(ListDoc1);
+            //*__________________________________________________________________________________________
+            // Save the compact string set
+            List<org.bson.Document> ListDoc2 = new ArrayList<>();
+            Iterator<String> iterator2 = Crawler.CompactStringSet.iterator();
+            String CompString = "";
+            while (iterator2.hasNext()) {
+                CompString = iterator2.next();
+                //add it in db
+                org.bson.Document document = new org.bson.Document();
+                document.append("CompactString", CompString);
+                ListDoc2.add(document);
+            }
+            //Add it to database
+            MongoCollection<org.bson.Document> VisitedCompactStringsC = Crawlerdb.getCollection("VisitedCompactStrings");
+            VisitedCompactStringsC.insertMany(ListDoc2);
+            //*__________________________________________________________________________________________
+            //save the URLs to crawl
+            List<org.bson.Document> ListDoc5 = new ArrayList<>();
+            while (!Crawler.URLsToCrawlQ.isEmpty()) {
+                URLToAdd = Crawler.URLsToCrawlQ.remove();
+                //add it in db
+                org.bson.Document document = new org.bson.Document();
+                document.append("URL", URLToAdd);
+                ListDoc5.add(document);
+            }
+            MongoCollection<org.bson.Document> URLsToCrawlC = Crawlerdb.getCollection("URLsToCrawl");
+            URLsToCrawlC.insertMany(ListDoc5);
+            //*__________________________________________________________________________________________
+            // Save the Normalized URLs map
+            List<org.bson.Document> ListDoc3 = new ArrayList<>();
+            for (Map.Entry<String, String> entry : Crawler.normalizedHM.entrySet()) {
+                org.bson.Document document = new org.bson.Document();
+                document.append("URL", entry.getKey());
+                document.append("NormalizedURL", entry.getValue());
+                ListDoc3.add(document);
+            }
+            //Add it to database
+            MongoCollection<org.bson.Document> NormalizedURLsC = Crawlerdb.getCollection("NormalizedURLs");
+            NormalizedURLsC.insertMany(ListDoc3);
+            //*__________________________________________________________________________________________
+            // save RefIn map
+            List<org.bson.Document> ListDoc4 = new ArrayList<>();
+            for (Map.Entry<String, Set<String>> entry : Crawler.RefURLHashMap.entrySet()) {
+                org.bson.Document document = new org.bson.Document();
+                document.append("URL", entry.getKey());
+                document.append("RefIn", entry.getValue());
+                ListDoc4.add(document);
+            }
+            //Add it to database
+            MongoCollection<org.bson.Document> RefInURLsC = Crawlerdb.getCollection("RefInURLs");
+            RefInURLsC.insertMany(ListDoc4);
+
+            // Save number of pages
+            org.bson.Document document = new org.bson.Document();
+            document.append("Pages", Crawler.NumOfPages);
+            URLsToCrawlC.insertOne(document);
+
+            CrawlerClient.close();
+        }
+    }
+
+    private static void populate_data_structures(MongoDatabase Crawlerdb, MongoCollection<org.bson.Document> URLsToCrawlC)
+    {
+        System.out.println("Populating data structures");
+        // Crawlerdb
+        // Find all documents in the collection
+        FindIterable<org.bson.Document> docs = URLsToCrawlC.find();
+        // Iterate over the documents and add each URL to the queue
+        for (org.bson.Document doc : docs) {
+            String url = doc.getString("URL");
+            if (url != null && !url.isEmpty()) {
+                Crawler.URLsToCrawlQ.add(url);
+            }
+        }
+        URLsToCrawlC.deleteMany(new org.bson.Document());
+        //* ____________________________________________________________
+        MongoCollection<org.bson.Document> RefInURLsC = Crawlerdb.getCollection("RefInURLs");
+        // Find all documents in the collection
+        docs = RefInURLsC.find();
+        // Iterate over the documents and populate the map
+        for (org.bson.Document doc : docs) {
+            String url = doc.getString("URL");
+            Set<String> refUrls = new HashSet<>();
+            // Get the 'RefIn' field as an array and add each value to the set
+            List<String> refUrlsList = (List<String>) doc.get("RefIn");
+            if (refUrlsList != null) {
+                for (String refUrl : refUrlsList) {
+                    if (refUrl != null && !refUrl.isEmpty()) {
+                        refUrls.add(refUrl);
+                    }
+                }
+            }
+
+            // Add the URL and set of ref URLs to the map
+            if (url != null && !url.isEmpty()) {
+                Crawler.RefURLHashMap.put(url, refUrls);
+            }
+        }
+        RefInURLsC.deleteMany(new org.bson.Document());
+        //* ____________________________________________________________
+        MongoCollection<org.bson.Document> NormalizedURLsC = Crawlerdb.getCollection("NormalizedURLs");
+        // Find all documents in the collection
+        docs = NormalizedURLsC.find();
+        // Iterate over the documents and populate the map
+        for (org.bson.Document doc : docs) {
+            String url = doc.getString("URL");
+            String normalizedUrl = doc.getString("NormalizedURL");
+
+            // Add the URL and normalized URL to the map
+            if (url != null && !url.isEmpty() && normalizedUrl != null && !normalizedUrl.isEmpty()) {
+                Crawler.normalizedHM.put(url, normalizedUrl);
+            }
+        }
+        NormalizedURLsC.deleteMany(new org.bson.Document());
+        //* ____________________________________________________________
+        MongoCollection<org.bson.Document> VisitedCompactStringsC = Crawlerdb.getCollection("VisitedCompactStrings");
+        // Find all documents in the collection
+        docs = VisitedCompactStringsC.find();
+        // Iterate over the documents and populate the set
+        for (org.bson.Document doc : docs) {
+            String compString = doc.getString("CompactString");
+            // Add the compact string to the set
+            if (compString != null && !compString.isEmpty()) {
+                Crawler.CompactStringSet.add(compString);
+            }
+        }
+        VisitedCompactStringsC.deleteMany(new org.bson.Document());
+        //* ____________________________________________________________
+        MongoCollection<org.bson.Document> VisitedURLsC = Crawlerdb.getCollection("VisitedURLs");
+        docs = VisitedURLsC.find();
+        // Iterate over the documents and populate the set
+        for (org.bson.Document doc : docs) {
+            String url = doc.getString("URL");
+            // Add the URL to the set
+            if (url != null && !url.isEmpty()) {
+                Crawler.VisitedURLsSet.add(url);
+            }
+        }
+        VisitedURLsC.deleteMany(new org.bson.Document());
+        //* ____________________________________________________________
+        //populates crawled urls and delete HTMLDocument
+        Crawler.mongoClient = MongoClients.create(new ConnectionString("mongodb+srv://samiha:Owxx9hDm5NFC4ANa@cluster0.4nczz1o.mongodb.net/7"));
+        Crawler.db = mongoClient.getDatabase("SearchEngine-api-db");
+//        Crawler.HTMLDocument = Crawler.db.getCollection("TempDbCrawler");
+        Crawler.HTMLDocument = Crawler.db.getCollection("TempDbCrawler2");
+        docs = Crawler.HTMLDocument.find();
+        // Iterate over the documents and add each URL to the queue
+        for (org.bson.Document doc : docs) {
+            String url = doc.getString("URL");
+            if (url != null && !url.isEmpty()) {
+                Crawler.CrawledURLsSet.add(url);
+            }
+        }
+        Crawler.HTMLDocument.deleteMany(new org.bson.Document());
+        Crawler.mongoClient.close();
+    }
+    private static boolean check_if_interrupted()
+    {
+        //see if the Pages document is found in the URLsToCrawl collection
+        MongoClient CrawlerClient = MongoClients.create("mongodb+srv://samiha:Owxx9hDm5NFC4ANa@cluster0.4nczz1o.mongodb.net/7");
+        MongoDatabase Crawlerdb = CrawlerClient.getDatabase("crawler-intermediate-data");
+        MongoCollection<org.bson.Document> URLsToCrawlC = Crawlerdb.getCollection("URLsToCrawl");
+        org.bson.Document doc = URLsToCrawlC.find(new org.bson.Document("Pages", new org.bson.Document("$exists", true))).limit(1).first();
+        if (doc == null) {
+            // document not found
+            CrawlerClient.close();
+            return false;
+        } else {
+            // document found
+            //set the number of pages
+            Crawler.NumOfPages = doc.getInteger("Pages");
+            if(Crawler.NumOfPages >= Crawler.TOTALNUMPAGES)
+            {
+                Crawler.LimitReached = true;
+            }
+            URLsToCrawlC.deleteOne(doc);
+            //populate the data structures
+            Crawler.populate_data_structures(Crawlerdb, URLsToCrawlC);
+            CrawlerClient.close();
+            return true;
+        }
+    }
+
     //* _______________________________ Main ___________________________________
     public static void main(String[] args) throws IOException, NoSuchAlgorithmException, URISyntaxException
     {
@@ -521,31 +729,49 @@ public class Crawler implements Runnable {
 //        Crawler.NumOfThreads = scanner.nextInt() -1;
 //        scanner.close();
         //! Comment
+        Crawler.NumOfThreads = 10;
+
         //!NEW
         Crawler.CompactStringSet = new HashSet<>();
         Crawler.VisitedURLsSet = new HashSet<>();
         Crawler.CrawledURLsSet = new HashSet<>();
 
-        Crawler.NumOfThreads = 10;
-        //Set files
+
         Crawler.URLsToCrawlQ = new LinkedList<String>();
         Crawler.LimitReached = false;
         //Initialize data structures
         Crawler.RefURLHashMap = new HashMap<>();
-        Crawler.VisitedURLsHash = new HashMap<>();
         Crawler.normalizedHM = new HashMap<>();
 
-        int NumOfCrawledURLs = 0;
-        int NumOfVisitedURLs = 0;
-        if(NumOfCrawledURLs == 0)
+        //check whether the crawler was interrupted before
+        if(!check_if_interrupted())
         {
-            //TODO: and empty db or do it manually
             //Seed set
             Set<String> SeedSet = new HashSet<>();
-            SeedSet.add("https://www.imdb.com/");
-            SeedSet.add("https://edition.cnn.com/");
-            SeedSet.add("https://www.pinterest.com/");
-            SeedSet.add("https://stackoverflow.com/");
+
+            SeedSet.add("https://www.imdb.com/");                       //*1
+            SeedSet.add("https://www.amazon.com/");                     //*2
+            SeedSet.add("https://www.pinterest.com/");                  //*3
+            SeedSet.add("https://education.nationalgeographic.org/");   //*4
+            SeedSet.add("https://www.nationalgeographic.org/");         //*5
+            SeedSet.add("https://www.goodreads.com/");                  //*6
+            SeedSet.add("https://www.jstor.org/");                      //*7
+            SeedSet.add("https://www.newscientist.com/");               //*8
+            SeedSet.add("https://www.politico.com/");                   //*9
+            SeedSet.add("https://www.encyclopedia.com/");               //*10
+            SeedSet.add("https://www.reuters.com/");                    //*11
+            SeedSet.add("https://www.unesco.org/");                     //*12
+            SeedSet.add("https://www.wikihow.com/");                    //*13
+            SeedSet.add("https://www.espn.in/");                        //*14
+            SeedSet.add("https://en.wikipedia.org/");                   //*15
+            SeedSet.add("https://www.sciencenews.org/");                //*16
+            SeedSet.add("https://www.who.int/");                        //*17
+            SeedSet.add("https://www.woah.org/");                       //*18
+            SeedSet.add("https://olympics.com/");                       //*19
+            SeedSet.add("https://www.allrecipes.com/");                 //*20
+
+
+
 
             for (String Seed: SeedSet)
             {
@@ -563,26 +789,24 @@ public class Crawler implements Runnable {
                 Crawler.add_url_in_URLsTOCrawlQ(Seed, normalizedUrl.toString());
             }
         }
-        else if(NumOfVisitedURLs == 0)
-        {
-            //fill data structures
-            Crawler.populate_URLsToCrawlPQ();
-            Crawler.populate_RefURLHashMap();
-            //continue populating db with Crawled URLs
-            Crawler.TerminateCrawler();
-        }
-        else
-        {
-            // populates data structures
-            Crawler.populate_VisitedURLsHash();
-            Crawler.populate_URLsToCrawlPQ();
-            Crawler.populate_RefURLHashMap();
-            //initialize number of pages
-            Crawler.NumOfPages = NumOfCrawledURLs;
-        }
-
         // Start initial thread
         start_new_crawler();
+
+        //! ________________________________ NEW ____________________________________________
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+            System.out.println("Exiting...");
+            for(Thread t: Crawler.threads){
+                t.interrupt();
+            }
+            // Perform cleanup tasks or save state information here
+            try {
+                Crawler.exit_crawler();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            } catch (URISyntaxException e) {
+                throw new RuntimeException(e);
+            }
+        }));
     }
 }
 
