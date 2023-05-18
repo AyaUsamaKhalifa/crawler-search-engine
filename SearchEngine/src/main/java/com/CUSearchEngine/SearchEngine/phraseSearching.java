@@ -1,4 +1,5 @@
 package com.CUSearchEngine.SearchEngine;
+import java.io.File;
 import java.io.IOException;
 
 import org.jsoup.Jsoup;
@@ -30,35 +31,40 @@ public class phraseSearching {
         for (int j = 0; j < Data.get(minIndex).data.size(); j++)
         {
 
-            String currentUrl = Data.get(minIndex).data.get(j).URL;
-            Document doc = Jsoup.connect(currentUrl).get();
-            String body = doc.body().text().toLowerCase();
-            String head = doc.head().text().toLowerCase();
+            //String currentUrl = Data.get(minIndex).data.get(j).URL;
+            String workingDir = System.getProperty("user.dir");
+            File input = new File(workingDir+"\\src\\main\\java\\com\\CUSearchEngine\\SearchEngine\\"+ Data.get(minIndex).data.get(j).filePath);
+            Document doc = Jsoup.parse(input, "UTF-8");
+            if(doc != null) {
+                //System.out.println("hereeee");
+                String body = doc.body().text().toLowerCase();
+                String head = doc.head().text().toLowerCase();
 
-            int wordCount = 0;
-            if  (body.contains(orginalPhrase))
-            {
-                int index = body.indexOf(orginalPhrase);
-                while (index != -1) {
-                    wordCount++;
-                    index = body.indexOf(orginalPhrase, index + orginalPhrase.length());
+                int wordCount = 0;
+                if (body.contains(orginalPhrase)) {
+                    //System.out.println("Insideeee bodyyy");
+                    int index = body.indexOf(orginalPhrase);
+                    while (index != -1) {
+                        wordCount++;
+                        index = body.indexOf(orginalPhrase, index + orginalPhrase.length());
+                    }
                 }
-            }
-            if (head.contains(orginalPhrase))
-            {
-                int index = head.indexOf(orginalPhrase);
-                while (index != -1) {
-                    wordCount++;
-                    index = head.indexOf(orginalPhrase, index + orginalPhrase.length());
+                if (head.contains(orginalPhrase)) {
+                    int index = head.indexOf(orginalPhrase);
+                    //System.out.println("Insideeee headdddddddd");
+                    while (index != -1) {
+                        wordCount++;
+                        index = head.indexOf(orginalPhrase, index + orginalPhrase.length());
+                    }
                 }
-            }
-            if(wordCount != 0) {
-                Website phrase = new Website();
-                phrase.TF = (double) wordCount / (double) head.length();
-                phrase.title = Data.get(minIndex).data.get(j).title;
-                phrase.URL = Data.get(minIndex).data.get(j).URL;
-                phrase.paragraph = Data.get(minIndex).data.get(j).paragraph;
-                UrlsDataReturned.add(phrase);
+                if (wordCount != 0) {
+                    Website phrase = new Website();
+                    phrase.TF = (double) wordCount / (double) head.length();
+                    phrase.title = Data.get(minIndex).data.get(j).title;
+                    phrase.URL = Data.get(minIndex).data.get(j).URL;
+                    phrase.paragraph = Data.get(minIndex).data.get(j).paragraph;
+                    UrlsDataReturned.add(phrase);
+                }
             }
 
         }

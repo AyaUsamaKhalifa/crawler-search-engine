@@ -20,8 +20,7 @@ public class Website {
     String date;
     int noOccTitle;
     HashSet<String> originalWords;
+    String filePath;
     int totalOcc;
-
-
 
 }

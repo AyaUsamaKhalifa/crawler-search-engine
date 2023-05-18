@@ -5,38 +5,990 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2d76bb6-0197-400f-ac29-4d73ea0468f9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Accessibility - Freedom of Information.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Accessibility - Freedom of Information_files/Notif.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Accessibility - Freedom of Information_files/Sit.dotmetrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Accessibility - Freedom of Information_files/box.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Accessibility - Freedom of Information_files/config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Accessibility - Freedom of Information_files/cooki.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Accessibility - Freedom of Information_files/detec.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Accessibility - Freedom of Information_files/door..download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Accessibility - Freedom of Information_files/foote.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Accessibility - Freedom of Information_files/id-cta.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Accessibility - Freedom of Information_files/idcta.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Accessibility - Freedom of Information_files/lib.j.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Accessibility - Freedom of Information_files/logge.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Accessibility - Freedom of Information_files/more-drawe.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Accessibility - Freedom of Information_files/orbit-v5-l.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Accessibility - Freedom of Information_files/orbit.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Accessibility - Freedom of Information_files/orbit.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Accessibility - Freedom of Information_files/perfo.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Accessibility - Freedom of Information_files/polyf.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Accessibility - Freedom of Information_files/redir.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Accessibility - Freedom of Information_files/requi.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Accessibility - Freedom of Information_files/rever.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Accessibility - Freedom of Information_files/scrip.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Accessibility - Freedom of Information_files/smart.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Accessibility - Freedom of Information_files/src.06bb46.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Accessibility - Freedom of Information_files/src.a.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Accessibility - Freedom of Information_files/statu.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Accessibility - Freedom of Information_files/strin.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Accessibility - Freedom of Information_files/token.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/10.2-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/10.2-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/11.1-1-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/11.1-1-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/8.2-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/8.2-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/EBU-TT-D_illustration1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/EBU-TT-D_illustration2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/SiteEvent.dotmetrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/Tokyo.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/a11y-menu.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/box.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/cookie-banners.bundl.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/cookie-library.bundl.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/detectview.bundle.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/door.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/fillLineGap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/footerpromo.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/id-cta.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/idcta-1.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/more-drawer.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/nav.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/orbit-v5-ltr.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/orbit.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/orbit.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/performance.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/polyfills.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/prism.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/prism.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/quiz-text-position-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/quiz-text-position-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/redirect.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/require.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/resized_text_1_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/resized_text_1_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/resized_text_1_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/resized_text_2_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/resized_text_2_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/resized_text_2_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/reverb-3.4.1.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/script.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/site.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/smarttag-5.29.1.min..download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/statusbar.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/sub_workflow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/teletext_area_mapping.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/teletext_characters.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/teletext_line_grouping.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/touch-detect.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/tracking.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/BBC Subtitle Guidelines_files/ttsLineHeightGap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/60010569_2022081806590158.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/9.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/Enabler_01_247.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/Enqz_20U.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/NotificationsMain.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/SiteEvent.dotmetrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/UFYwWwmt.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/_110811188_gettyimages-96.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/_111147173_p085rzml.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/_112158917_p08c9wx2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/_112909134_faisalislam.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/_118960980_gettyimages-12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/_124763700_belfastferry.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/_127255672_canadian1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/_127477371_gettyimages-12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/_127748867_kenari_peeled_.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/_127829791_together1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/_128192383_shereneheadley.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/_128283596_gettyimages-14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/_128289646_sunakgreenport.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/_128629545_gettyimages-12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/_128696411_dsc_0916_lowre.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/_128884671_gettyimages-14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/_129028035_gettyimages-13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/_129078599_gettyimages-12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/_129171814_gettyima(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/_129171814_gettyima(2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/_129171814_gettyimages-11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/_129220575_gettyimages-10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/_129269954_adrianma(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/_129269954_adrianma001-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/_129293643_meattesting_ge.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/_129336110_coffee11(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/_129336110_coffee111.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/_129419774_dimadein(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/_129419774_dimadeinega.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/_129496191_blue1(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/_129496191_blue1(2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/_129496191_blue1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/_129572919_c1cab228(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/_129572919_c1cab228(2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/_129572919_c1cab228-4be7-.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/_129645930_water1(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/_129645930_water1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/_129752765_electricvan.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/adUnits.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/aframe.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/beacon.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/box.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/breakingNewsBanner.j.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/bundle.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/ccpa.801808462cd3920.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/chartbeat.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/container(1).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/container(2).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/container.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/contextfeed.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/cookie-banners.bundl.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/cookie-library.bundl.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/cookie_push_onload.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/cx.cce.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/cx.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/detectview.bundle.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/door.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/dotcom-ads.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/dotcom-analytics.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/dotcom-bootstrap.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/dotcom-preroll.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/dv-measurements3783..download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/dvtp_src.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/e488cdb0-e7cb-4d91-9.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/edr.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/enhanced.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/es5-sham.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/es5-shim.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/ext.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/f(1).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/f(2).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/f(3).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/f(4).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/f(5).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/f(6).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/f(7).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/f(8).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/f(9).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/f.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/footerpromo.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/gdpr-tcf.0d6e3f7649c.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/gen_204" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/gen_204(1)" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/html_inpage_renderin.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/iasPET.1.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/id-cta.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/idcta-1.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/index-page-enhanced.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/index-page.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/istats-1.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/jload" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/l" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/load-cookie.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/main.19.8.411.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/more-drawer.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/navigation.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/orbit-v5-ltr.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/orbit.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/orbit.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/ozpb.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/p0fnv2kq.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/performance.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/pixel.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/pixeljs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/polyfills.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/prebid-bbc-ozone.min.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/push-proxy.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/react-dom.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/react.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/redirect.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/require.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/reverb-3.6.1.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/rx_lidar.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/saved_resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/saved_resource(1).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/saved_resource(10).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/saved_resource(11).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/saved_resource(12).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/saved_resource(13).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/saved_resource(14).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/saved_resource(15).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/saved_resource(16).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/saved_resource(17).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/saved_resource(18).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/saved_resource(19).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/saved_resource(2).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/saved_resource(20).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/saved_resource(21).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/saved_resource(3).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/saved_resource(4).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/saved_resource(5).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/saved_resource(6).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/saved_resource(7).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/saved_resource(8).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/saved_resource(9).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/saved_resource.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/sca.17.6.2.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/script.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/smarttag-5.29.4.min..download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/sodar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/statusbar.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/tinypass.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/user_sync.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/v52afc6f149f6479b8c77fa569edb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/viewability11.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/visit.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Global Trade - BBC News_files/wrapperMessagingWith.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/16.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/733269e0-6fde-11ed-bf.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/9.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/NotificationsMai.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/SiteEvent.dotmetrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/_112979198_simonjack.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/_121127024_gettyimage.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/_121137647_heatpump.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/_123953612_meterreadi.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/_124921061_gettyimage.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/_126380927_mediaitem1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/_126441219_solarfury.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/_126589365_profile_ma.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/_127150895_24b7d0de-7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/_127150898_mediaitem1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/_127391490_gettyimage.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/_127419294_gettyimage.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/_127496965_gettyimage.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/_127540292_gettyimage.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/_127561009_climate_5_.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/_127601314_book1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/_127813505_microsoftt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/_127815649_amy_appley.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/_127836536_gettyimage.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/_127842969_gettyimage.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/_127864159_oilrigwork.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/_127895660_wut2e7rq.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/_127927230_nicwordswo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/_128000013_merc-benz-.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/_128379283_tap.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/_128565465_fash1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/_128589837_gettyimage.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/_129013919_juli(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/_129013919_juliaquinn.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/_129097037_fqoa(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/_129097037_fqoa_ncwya.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/_129221429_r_av(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/_129221429_r_avt_wh_5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/_129353482_man1(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/_129353482_man1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/_129421611_jiri(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/_129421611_jiri-handr.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/_129517844_cora(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/_129517844_coralnew4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/_129665239_comp_2pane.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/adUnits.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/aframe.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/beacon.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/box.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/breakingNewsBann.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/bundle.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/ccpa.801808462cd.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/chartbeat.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/container(1).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/container(2).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/container.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/contextfeed.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/cookie-banners.b.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/cookie-library.b.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/css2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/cx.cce.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/cx.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/detectview.bundl.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/door.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/dotcom-ads.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/dotcom-analytics.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/dotcom-bootstrap.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/dotcom-preroll.j.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/dv-measurements3.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/dvtp_src.j(1).download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/dvtp_src.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/e488cdb0-e7cb-4d.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/edr.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/enhanced.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/es5-sham.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/es5-shim.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/ext.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/f(1).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/f(2).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/f(3).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/f.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/footerpromo.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/gdpr-tcf.0d6e3f7.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/iasPET.1.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/id-cta.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/idcta-1.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/index-page-enhanced.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/index-page.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/istats-1.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/jload" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/jload(1)" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/load-cookie.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/main.19.8.411.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/more-drawer.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/navigation.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/orbit-v5-ltr.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/orbit.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/orbit.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/ozpb.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/p0fnv2kq.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/performance.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/pixeljs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/pixeljs(1)" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/polyfills.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/prebid-bbc-ozone.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/push-proxy.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/react-dom.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/react.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/redirect.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/require.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/reverb-3.6.1.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/rx_lidar.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/saved_resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/saved_resource(1).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/saved_resource(10).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/saved_resource(11).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/saved_resource(12).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/saved_resource(13).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/saved_resource(14).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/saved_resource(15).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/saved_resource(16).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/saved_resource(17).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/saved_resource(18).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/saved_resource(19).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/saved_resource(2).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/saved_resource(20).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/saved_resource(21).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/saved_resource(22).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/saved_resource(23).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/saved_resource(24).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/saved_resource(3).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/saved_resource(4).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/saved_resource(5).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/saved_resource(6).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/saved_resource(7).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/saved_resource(8).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/saved_resource(9).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/saved_resource.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/sca.17.6.2.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/script.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/smarttag-5.29.4..download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/sodar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/statusbar.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/tinypass.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/user_sync.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/v52afc6f149f6479b8c77fa56" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/viewability11.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/visit.js(1).download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/visit.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/New Tech Economy - BBC News_files/wrapperMessaging.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/12194574813961688118" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/1530527075318871949" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/67cbe3f0-f4a5-1(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/67cbe3f0-f4a5-11ed-89.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/NotificationsMai.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/SiteEvent.dotmetrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/_103152545_blac(1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/_103152545_blackheadp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/_107542820_promo_ulst.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/_107542826_promo_foyl.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/_109130643_antr(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/_109130643_antrimcour.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/_115537871_019539222.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/_117797263_weat(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/_117797263_weathersti.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/_125022352_john(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/_125022352_john(2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/_125022352_john.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/_125312243_gettyimage.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/_126813169_b2cd(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/_126813169_b2cd(2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/_126813169_b2cd105f-8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/_126818169_beb67aef-8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/_128832326_0f7f(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/_128832326_0f7fbb8d-e.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/_128899416_policepace.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/_129256648_le_2023_in.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/_129628863_fvhx3uwxga.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/_129698777_p0fmsst7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/_129724536_leinsterho.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/_129731149_centerparc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/_129735024_mcsorleyfa.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/_129739616_screenshot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/_129747666_dogstation.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/_129749017_049977857.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/_129749019_andrewmcda.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/_129749781_florenceco.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/_129749952_fighting_i.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/_129753144_davidlivin.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/_129755708_pace(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/_129755708_pace(2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/_129755708_pacemakerf.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/_129757261_jimboroman.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/_129758097_dets(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/_129758097_dets(2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/_129758097_detsuptlin.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/adUnits.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/aframe.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/beacon.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/box.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/breakingNewsBann.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/bundle.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/ccpa.801808462cd.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/chartbeat.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/container.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/cookie-banners.b.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/cookie-library.b.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/cx.cce.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/cx.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/detectview.bundl.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/door.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/dotcom-ads.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/dotcom-analytics.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/dotcom-bootstrap.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/dotcom-preroll.j.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/dv-measurements3.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/dvtp_src.j(1).download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/dvtp_src.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/e488cdb0-e7cb-4d.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/edr.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/enhanced.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/es5-sham.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/es5-shim.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/f(1).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/f(2).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/f(3).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/f(4).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/f.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/footerpromo.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/gaAccount" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/gdpr-tcf.0d6e3f7.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/iasPET.1.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/id-cta.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/idcta-1.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/index-page-enhanced.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/index-page.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/istats-1.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/jload" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/jload(1)" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/l" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/l(1)" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/load-cookie.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/main.19.8.411.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/more-drawer.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/navigation.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/orbit-v5-ltr.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/orbit.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/orbit.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/ozpb.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/p0fnv2kq.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/p1.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/performance.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/polyfills.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/prebid-bbc-ozone.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/push-proxy.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/react-dom.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/react.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/redirect.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/require.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/reverb-3.6.1.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/rx_lidar.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/saved_resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/saved_resource(1).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/saved_resource(10).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/saved_resource(2).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/saved_resource(3).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/saved_resource(4).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/saved_resource(5).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/saved_resource(6).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/saved_resource(7).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/saved_resource(8).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/saved_resource(9).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/saved_resource.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/sca.17.6.2.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/script.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/smarttag-5.29.4..download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/sodar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/sp1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/statusbar.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/tinypass.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/user_sync.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/v52afc6f149f6479b8c77fa56" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/visit.js(1).download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/visit.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Northern Ireland - BBC News_files/wrapperMessaging.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/17525271590209948106" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/Azerbaijan_Logo_@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/Lens_1_part1_@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/Lens_1_part2_@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/Lens_2_part1_@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/Lens_2_part2_@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/Lens_3_part1_@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/Lens_3_part2_@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/Lens_4_part1_@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/Lens_4_part2_@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/NotificationsMain.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/SiteEvent.dotmetrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_107883130_landscape_kingfisher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_118458039_slowthai(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_118458039_slowthai(2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_118458039_slowthai.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_121339192_kathleenstock_hz.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_127927391_electric-fire-pa.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_128398612_glennpoyner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_129082101_alexis.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_129498571_976-aa.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_129506959_4e4346d9-5c65-45c2-8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_129632452_p0fm0ytg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_129637665_ec76cad8f864f3a285b7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_129656900_shutterstock_editori.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_129706824_gettyimages-14881091.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_129709857_shutterstock_editori.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_129710489_mediaitem129710488.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_129719469_capture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_129728537_capture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_129734520_thamemagnetfishing1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_129736186_shutterstock_editori.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_129737707_abbeymeadowws.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_129739568_gettyimages-11727823.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_129739571_gettyimages-82484198.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_129744862_eye2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_129744906_mediaitem12974(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_129744906_mediaitem129744620.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_129746309_ed504ae13e0c7c0c0e06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_129746314_9af9c8c6fdf03d(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_129746314_9af9c8c6fdf03d(2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_129746314_9af9c8c6fdf03dab87e5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_129746521_aae7edbaa43e4d(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_129746521_aae7edbaa43e4d2317fb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_129748394_img_0593(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_129748394_img_0593(2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_129748394_img_0593.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_129749030_markgatiss2(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_129749030_markgatiss2(2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_129749030_markgatiss2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_129750469_gettyimages-92(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_129750469_gettyimages-92(2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_129750469_gettyimages-92905179.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_129753861_04b5dcdc772527(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/_129753861_04b5dcdc77252752b014.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/adUnits.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/aframe.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/arrow_left_@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/arrow_right_@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/beacon.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/bg_main_1_@2x.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/bg_main_2_@2x.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/bg_main_3_@2x.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/bg_main_4_@2x.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/box.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/bundle.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/button_1_@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/button_2_@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/ccpa.801808462cd3920659a5..download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/chartbeat.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/container.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/cookie-banners.bundle.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/cookie-library.bundle.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/cx.cce.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/cx.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/detectview.bundle.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/door.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/dotcom-ads.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/dotcom-analytics.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/dotcom-bootstrap.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/dotcom-preroll.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/dv-measurements3783.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/dvtp_src.js(1).download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/dvtp_src.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/e488cdb0-e7cb-4d91-9648-60.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/edr.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/enhanced.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/es5-sham.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/es5-shim.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/f(1).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/f(2).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/f(3).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/f(4).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/f.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/footerpromo.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/gdpr-tcf.0d6e3f7649c17a3fe.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/header_1_@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/header_2_@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/header_3_@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/header_4_@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/iasPET.1.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/id-cta.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/idcta-1.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/index-page-enhanced.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/index-page.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/istats-1.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/jload" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/jload(1)" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/l" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/load-cookie.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/main.19.8.411.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/more-drawer.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/navigation.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/orbit-v5-ltr.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/orbit.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/orbit.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/ozpb.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/p0fnv2kq.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/performance.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/polyfills.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/prebid-bbc-ozone.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/push-proxy.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/react-dom.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/react.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/redirect.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/require.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/reverb-3.6.1.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/rx_lidar.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/saved_resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/saved_resource(1).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/saved_resource(10).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/saved_resource(11).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/saved_resource(12).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/saved_resource(2).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/saved_resource(3).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/saved_resource(4).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/saved_resource(5).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/saved_resource(6).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/saved_resource(7).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/saved_resource(8).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/saved_resource(9).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/saved_resource.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/sca.17.6.2.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/script.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/slider_icon_off_@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/slider_icon_on_@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/smarttag-5.29.4.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/sodar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/statusbar.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/tinypass.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/user_sync.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/v52afc6f149f6479b8c77fa569edb011816" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/visit.js(1).download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/visit.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/web.js(1).download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/web.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Oxford - BBC News_files/wrapperMessagingWithoutDet.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/60010569_20220818065906623_4y.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/Enabler_01_247.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/Enqz_20U.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/Learn_With_Chegg_Vertical-_1..png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/NotificationsMain.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/SiteEvent.dotmetrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/UFYwWwmt.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/_107883130_landscape_kingfish.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/_114369862_geograph-580(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/_114369862_geograph-580(2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/_114369862_geograph-5808424-b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/_115576031_policegeneri(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/_115576031_policegeneric.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/_117520793_ruh(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/_117520793_ruh(2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/_117520793_ruh.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/_128514356_bunker(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/_128514356_bunker(2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/_128514356_bunker.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/_129644919_ecebfae8-6a52-4ae7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/_129653400_eadbd88b-d9ce-4254.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/_129704608_2e110b13-7c9b-4083.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/_129712138_gettyimages-492136.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/_129715095_rew.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/_129733892_caitlincondu(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/_129733892_caitlinconducting.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/_129735576_shutterstock_edito.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/_129742613_mediaitem129744714.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/_129744062_fishandchipspic1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/_129745223_carlyjeans1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/_129749102_whatsappimage2023-.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/_129749425_122738.royal(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/_129749425_122738.royal-kate-.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/_129749834_shutterstock(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/_129749834_shutterstock(2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/_129749834_shutterstock_edito.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/_129752116_screenshot-w(1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/_129752116_screenshot-w(2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/_129752116_screenshot-www.goo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/_129753979_firepoollockphoto2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/_129756425_shutterstock_edito.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/_129757576_mediaitem129(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/_129757576_mediaitem129758923.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/_129759123_mediaitem129758698.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/_98330662_mediaitem58414000.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/adUnits.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/aframe.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/beacon.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/box.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/bundle.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/ccpa.801808462cd3920659a.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/chartbeat.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/container(1).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/container.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/cookie-banners.bundle.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/cookie-library.bundle.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/cookie_push_onload.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/cx.cce.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/cx.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/detectview.bundle.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/door.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/dotcom-ads.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/dotcom-analytics.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/dotcom-bootstrap.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/dotcom-preroll.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/dv-measurements3783.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/dvtp_src.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/e488cdb0-e7cb-4d91-9648-.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/edr.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/enhanced.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/es5-sham.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/es5-shim.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/f(1).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/f(2).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/f(3).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/f(4).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/f(5).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/f(6).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/f(7).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/f(8).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/f(9).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/f.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/footerpromo.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/gdpr-tcf.0d6e3f7649c17a3.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/gen_204" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/gen_204(1)" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/html_inpage_rendering_li.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/iasPET.1.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/id-cta.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/idcta-1.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/index-page-enhanced.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/index-page.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/istats-1.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/jload" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/load-cookie.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/main.19.8.411.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/more-drawer.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/navigation.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/orbit-v5-ltr.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/orbit.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/orbit.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/ozpb.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/p0fnv2kq.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/performance.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/pixel.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/polyfills.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/prebid-bbc-ozone.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/push-proxy.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/react-dom.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/react.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/redirect.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/require.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/reverb-3.6.1.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/rx_lidar.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/saved_resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/saved_resource(1).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/saved_resource(2).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/saved_resource(3).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/saved_resource(4).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/saved_resource(5).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/saved_resource(6).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/saved_resource(7).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/saved_resource(8).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/saved_resource.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/sca.17.6.2.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/script.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/smarttag-5.29.4.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/sodar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/statusbar.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/tinypass.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/user_sync.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/v52afc6f149f6479b8c77fa569edb0118" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/visit.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/web.js(1).download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/web.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/Somerset - BBC News_files/wrapperMessagingWithoutD.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/16.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/8fd9bd60-f4d0-11ed-92cc-b3a9bf1f67e.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/9.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/NotificationsMain.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/SiteEvent.dotmetrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/_112909134_faisalislam.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/_126813169_b2cd105f-85ba-44d5-8a1d-.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/_128724603_gettyimages-1012679452.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/_128832326_0f7fbb8d-eb7f-4d14-aee8-.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/_129646300_not_my_king_pa(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/_129646300_not_my_king_pa.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/_129723638_p0fn634j.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/_129729944_p0fn9jjd.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/_129734732_sunak(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/_129734732_sunak.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/_129742772_429353.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/_129752192_20230510_rwt_stockholm_m.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/_129752765_electricvan.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/_129754374_rosco2(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/_129754374_rosco2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/_129754464_robert.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/_129755708_pacemakerfionnghualamary.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/_129757044_gettyimages-134778(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/_129757044_gettyimages-1347784626-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/_129757280_naz.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/_129757852_samlee.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/_129758131_gettyimages-1490861735.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/_129758447_gettyimages-464800578.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/_129759313_princeharry(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/_129759313_princeharry.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/_129759477_b27ab29d-f5fe-43fb-9728-.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/_129759748_whatsappimage2023-05-17a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/_129759943_everafdarcycomp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/_129759945_withybush.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/_129760133_alien.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/_129760556_bethwinterstillbbc.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/_129760695_gettyimages-125279(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/_129760695_gettyimages-1252794577.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/_129761509_subwayposter3c_bar(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/_129761509_subwayposter3c_barolo_ba.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/_129761693_microsoftteams-image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/_129761831_b90cefdd-9991-4867-8638-.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/_129762707_gettyimages-1491058439.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/adUnits.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/aframe.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/beacon.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/box.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/breakingNewsBanner.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/bundle.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/ccpa.801808462cd3920659a5.bund.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/chartbeat.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/container(1).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/container(2).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/container.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/contextfeed.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/cookie-banners.bundle.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/cookie-library.bundle.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/css2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/cx.cce.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/cx.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/detectview.bundle.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/door.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/dotcom-ads.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/dotcom-analytics.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/dotcom-bootstrap.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/dotcom-preroll.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/dv-measurements3783.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/dvtp_src.js(1).download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/dvtp_src.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/e488cdb0-e7cb-4d91-9648-60d437.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/edr.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/enhanced.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/es5-sham.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/es5-shim.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/ext.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/f(1).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/f(2).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/f(3).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/f.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/footerpromo.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/gdpr-tcf.0d6e3f7649c17a3fe0be..download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/iasPET.1.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/id-cta.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/idcta-1.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/index-page-enhanced.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/index-page.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/istats-1.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/jload" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/jload(1)" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/load-cookie.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/main.19.8.411.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/more-drawer.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/navigation.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/orbit-v5-ltr.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/orbit.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/orbit.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/ozpb.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/p0fnnddf.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/performance.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/pixeljs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/pixeljs(1)" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/polyfills.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/prebid-bbc-ozone.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/push-proxy.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/react-dom.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/react.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/redirect.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/require.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/reverb-3.6.1.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/rx_lidar.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/saved_resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/saved_resource(1).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/saved_resource(10).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/saved_resource(11).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/saved_resource(12).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/saved_resource(13).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/saved_resource(14).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/saved_resource(15).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/saved_resource(16).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/saved_resource(17).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/saved_resource(18).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/saved_resource(19).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/saved_resource(2).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/saved_resource(20).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/saved_resource(21).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/saved_resource(22).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/saved_resource(23).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/saved_resource(24).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/saved_resource(3).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/saved_resource(4).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/saved_resource(5).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/saved_resource(6).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/saved_resource(7).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/saved_resource(8).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/saved_resource(9).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/saved_resource.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/sca.17.6.2.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/script.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/smarttag-5.29.4.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/sodar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/statusbar.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/tinypass.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/user_sync.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/v52afc6f149f6479b8c77fa569edb0118168176" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/viewability11.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/visit.js(1).download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/visit.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/UK - BBC News_files/wrapperMessagingWithoutDetecti.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/htmlDocuments/test2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/Indexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/Indexer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/MyApplicationRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/MyApplicationRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/Ranker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/Ranker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/SearchEngineApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/SearchEngineApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/Config.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/Website.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/Website.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/Word.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/Word.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/WordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/WordController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/WordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/WordService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/phraseSearching.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/phraseSearching.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/popularity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/popularity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/Indexer$Data.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/Indexer$Data.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/Indexer$Word.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/Indexer$Word.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/Indexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/Indexer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/MyApplicationRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/MyApplicationRunner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/Ranker$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/Ranker$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/Ranker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/Ranker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/SearchEngineApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/SearchEngineApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/Website.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/Website.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/Word.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/Word.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/WordController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/WordController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/WordService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/WordService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/phraseSearching.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/phraseSearching.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/popularity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CUSearchEngine/SearchEngine/popularity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../search-engine_front-end/src/ResultsPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/../search-engine_front-end/src/ResultsPage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../search-engine_front-end/src/ResultsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../search-engine_front-end/src/ResultsPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../search-engine_front-end/src/SearchArea.js" beforeDir="false" afterPath="$PROJECT_DIR$/../search-engine_front-end/src/SearchArea.js" afterDir="false" />
-    </list>
-    <list id="8742363f-5f0c-4946-b70f-48a361939efa" name="Changes by Bassant" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/WordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/WordService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/phraseSearching.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/phraseSearching.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,41 +1005,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/WordService.java">
-      <ranges>
-        <range start1="2" end1="2" start2="2" end2="3" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
-        <range start1="3" end1="3" start2="4" end2="8" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
-        <range start1="5" end1="5" start2="10" end2="11" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
-        <range start1="8" end1="8" start2="14" end2="16" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
-        <range start1="15" end1="15" start2="23" end2="32" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
-        <range start1="38" end1="38" start2="55" end2="64" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
-        <range start1="41" end1="41" start2="67" end2="68" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
-        <range start1="44" end1="45" start2="71" end2="71" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
-        <range start1="46" end1="47" start2="72" end2="72" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
-        <range start1="49" end1="50" start2="74" end2="74" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
-        <range start1="52" end1="53" start2="76" end2="80" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
-        <range start1="71" end1="73" start2="98" end2="101" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
-        <range start1="75" end1="76" start2="103" end2="106" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
-        <range start1="80" end1="84" start2="110" end2="114" changelist="8742363f-5f0c-4946-b70f-48a361939efa" />
-        <range start1="88" end1="115" start2="118" end2="118" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/com/CUSearchEngine/SearchEngine/phraseSearching.java">
-      <ranges>
-        <range start1="5" end1="5" start2="5" end2="12" changelist="8742363f-5f0c-4946-b70f-48a361939efa" />
-        <range start1="7" end1="7" start2="14" end2="17" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
-        <range start1="10" end1="10" start2="20" end2="21" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
-        <range start1="13" end1="14" start2="24" end2="24" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
-        <range start1="28" end1="28" start2="38" end2="39" changelist="8742363f-5f0c-4946-b70f-48a361939efa" />
-        <range start1="29" end1="30" start2="40" end2="45" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
-        <range start1="31" end1="32" start2="46" end2="51" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
-        <range start1="33" end1="34" start2="52" end2="57" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
-        <range start1="35" end1="38" start2="58" end2="73" changelist="d2d76bb6-0197-400f-ac29-4d73ea0468f9" />
-        <range start1="40" end1="40" start2="75" end2="76" changelist="8742363f-5f0c-4946-b70f-48a361939efa" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -110,22 +1027,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/sohad/Downloads/htmlcompressor-1.4.jar",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/sohad/Downloads/htmlcompressor-1.4.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn install" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.Indexer">
+  <component name="RunManager" selected="Application.SearchEngineApplication">
     <configuration name="Indexer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.CUSearchEngine.SearchEngine.Indexer" />
       <module name="SearchEngine" />
@@ -154,8 +1071,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Indexer" />
         <item itemvalue="Application.SearchEngineApplication" />
+        <item itemvalue="Application.Indexer" />
       </list>
     </recent_temporary>
   </component>
